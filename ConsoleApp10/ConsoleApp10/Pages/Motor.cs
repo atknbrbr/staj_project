@@ -22,11 +22,8 @@ using Winium.Elements.Desktop.Extensions;
 
 namespace ConsoleApp10.Pages
 {
-    public class Motor
+    public class Motor : BasePage
     {
-        private readonly WiniumDriver winiumDriver;
-        private readonly CruciatusElement winiumCruciatus;
-        private readonly Actions actions;
         
         //private String headerName;
 
@@ -46,14 +43,6 @@ namespace ConsoleApp10.Pages
         private IWebElement BtMotorAyarlar=> winiumDriver.FindElementById("Motor_Ayarlar");
 
 
-
-        public Motor(WiniumDriver _winiumDriver, CruciatusElement _winiumCruciatus)
-        {
-            winiumDriver = _winiumDriver;
-            winiumCruciatus = _winiumCruciatus;
-            actions = new Actions(winiumDriver);
-        }
-
         public void ClickMotorMenu()
         {
             BtMotor.Click();
@@ -70,15 +59,17 @@ namespace ConsoleApp10.Pages
         public void ClickMotorGostergelerTablo()
         {
             BtMotor.Click();
+            BtGostergeler.Click();
             CheckboxMotorTablo.Click();
             //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Gostergeler-TabloGoster");
             Thread.Sleep(500);
-            CheckboxMotorTablo.Click();
+            //CheckboxMotorTablo.Click();
         }
 
         public bool ClickMotorGostergelerSecim(String btnName)
         {
             BtMotor.Click();
+            BtGostergeler.Click();
             try
             {
                 IWebElement radioBtn = winiumDriver.FindElementById(btnName);
@@ -87,7 +78,7 @@ namespace ConsoleApp10.Pages
                 Thread.Sleep(200);
                 ComboGosterge.Click();
                 Thread.Sleep(200);
-                TakeScreenshot.CaptureApp("Motor-MotorDegerler-Gostergeler-SecilenDeger");
+                MainHeaders.CreateSubFolders("Seçilen Değer", cruciatusElement, 1, 0, 0);
                 Thread.Sleep(500);
                 //winiumDriver.FindElementById("irtifa_radiobuton").Click();
                 return true;
@@ -102,20 +93,20 @@ namespace ConsoleApp10.Pages
         public bool ClickMotorGostergelerMotorAyarlari()
         {
             BtMotor.Click();
+            BtGostergeler.Click();
             try
             {
+                MainHeaders.CreateSubFolders("Motor Ayarları-1", cruciatusElement, 1, 0, 0);
                 ComboMotorAyar1.Click();
-                ComboMotorAyar1.Click();
-                MainHeaders.CreateSubFolders("Motor Ayarları-1", winiumCruciatus, 1, 0, 0);
                 Thread.Sleep(500);
                 ElemComboMotor1.Click();
                 Thread.Sleep(200);
                 ComboMotorAyar2.Click();
-                MainHeaders.CreateSubFolders("Motor Ayarları-2", winiumCruciatus, 1, 0, 0);
+                MainHeaders.CreateSubFolders("Motor Ayarları-2", cruciatusElement, 1, 0, 0);
                 Thread.Sleep(500);
                 ElemComboMotor2.Click();
                 Thread.Sleep(200);
-                MainHeaders.CreateSubFolders("Motor Ayarları-3", winiumCruciatus, 1, 0, 0);
+                MainHeaders.CreateSubFolders("Motor Ayarları-3", cruciatusElement, 1, 0, 0);
 
                 Thread.Sleep(500);
                 return true;
@@ -131,7 +122,7 @@ namespace ConsoleApp10.Pages
             BtMotor.Click();
             Thread.Sleep(500);
             BtDiagnostik.Click();
-            var elements = winiumCruciatus.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='TextBlock']")).ToList();
+            var elements = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='TextBlock']")).ToList();
 
             foreach (var element in elements)
             {
@@ -145,22 +136,22 @@ namespace ConsoleApp10.Pages
                     {
                         // Hava hızı
                         case 0:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderHava, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderHava, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Rüzgar Hızı
                         case 4:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderRuzgar, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderRuzgar, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Ortam Sıcaklığı
                         case 8:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderSicaklık, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderSicaklık, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Motor Devri
                         case 12:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderMotor, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderMotor, ustLimit, altLimit, guncelDeger);
                             continue;
 
                         default:

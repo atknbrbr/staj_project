@@ -17,8 +17,7 @@ namespace ConsoleApp10.Tests
         [SetUp]
         public void GucSetup()
         {
-            guc = new Guc(driver, cruciatusElement);
-            guc.ClickGucMenu();
+            guc = new Guc();
         }
 
         [Test]

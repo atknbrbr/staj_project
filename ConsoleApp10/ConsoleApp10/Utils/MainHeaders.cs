@@ -60,8 +60,8 @@ namespace ConsoleApp10.Utils
                     subheader1.Add(header1.Properties.Name);
                 }
 
-                fullPath += "-" + subheader1[sub1] + "-";
             }
+            fullPath += subheader1[sub1] + "-";
 
             if (sub2 < 0)
             {
@@ -79,9 +79,8 @@ namespace ConsoleApp10.Utils
                 {
                     subheader2.Add(header2.Properties.Name);
                 }
-
-                fullPath += "-" + subheader2[sub2] + "-";
             }
+            fullPath += subheader2[sub2] + "-";
             TakeScreenshot.CaptureApp(fullPath + description);
             return;
 

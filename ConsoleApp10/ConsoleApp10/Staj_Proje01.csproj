@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drivers\WinumDriverFactory.cs" />
+    <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\Guc - Kopyala.cs" />
     <Compile Include="Pages\Guc.cs" />
     <Compile Include="Pages\Konfigurasyon.cs" />

@@ -18,8 +18,7 @@ namespace ConsoleApp10.Tests
         [SetUp]
         public void MotorSetup()
         {
-            motor = new Motor(driver, cruciatusElement);
-            motor.ClickMotorMenu();
+            motor = new Motor();
         }
 
         [Test]

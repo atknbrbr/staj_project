@@ -28,19 +28,14 @@ namespace ConsoleApp10.Utils
 
             foreach (string word in words)
             {
-                if (Int32.TryParse(word, out int test) || word == null || word == words[words.Length - 1])
-                {
-                    break;
-                }
-
-                else if (word.EndsWith("."))
-                {
-                    words[words.Length - 1] = word.Remove(word.Length - 1);
-                    break;
-                }
-
                 Directory.CreateDirectory(path + "/" + word);
                 path = path + "/" + word;
+
+                if (Int32.TryParse(word, out int test) || word == null || word == words[words.Length - 2])
+                {
+                    break;
+                }
+
             }
 
             Image img = null;

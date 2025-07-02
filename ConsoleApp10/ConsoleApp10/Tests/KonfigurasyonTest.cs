@@ -18,8 +18,7 @@ namespace ConsoleApp10.Tests
         [SetUp]
         public void KonfigurasyonSetup()
         {
-            konfigurasyon = new Konfigurasyon(driver, cruciatusElement);
-            konfigurasyon.ClickKonfigurasyonMenu();
+            konfigurasyon = new Konfigurasyon();
         }
 
 
@@ -88,5 +87,11 @@ namespace ConsoleApp10.Tests
             Thread.Sleep(500);
         }
 
+        [Test]
+        public void KonfigurasyonListviewGoruntuTest()
+        {
+            konfigurasyon.KonfigurasyonListviewGoruntu();
+            Thread.Sleep(500);
+        }
     }
 }

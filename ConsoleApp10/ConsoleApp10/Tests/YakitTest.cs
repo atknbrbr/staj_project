@@ -18,8 +18,7 @@ namespace ConsoleApp10.Tests
         [SetUp]
         public void YakitSetup() 
         {
-            yakit = new Yakit(driver, cruciatusElement);
-            yakit.ClickYakitMenu();
+            yakit = new Yakit();
         }
 
         [Test]

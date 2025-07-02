@@ -17,8 +17,10 @@ namespace ConsoleApp10.Utils
 
         public static void CheckSliders(CruciatusElement cruciatusElement, Actions actions, IWebElement slider1, int a, int b, int c)
         {
-            //MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
-            //fileName++;
+            if (fileName == 1) 
+            {
+                MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1); fileName++;
+            }
 
             //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
             ustLimit = a;
@@ -34,7 +36,7 @@ namespace ConsoleApp10.Utils
                     fileName++;
                 }
                 
-                else if (ustLimit > 0)
+                else if (ustLimit >= 0)
                 {
                     actions.MoveToElement(slider1, 5, 10).Perform();
                     for (; guncelDeger <= 0; guncelDeger++)
@@ -104,7 +106,7 @@ namespace ConsoleApp10.Utils
 
                 }
             }
-            else if (guncelDeger > 80 && guncelDeger < 200)
+            else if (guncelDeger > 81 && guncelDeger < 200)
             {
                 if (ustLimit > 200)
                 {

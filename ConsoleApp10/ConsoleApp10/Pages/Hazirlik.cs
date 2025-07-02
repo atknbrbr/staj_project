@@ -12,25 +12,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp10.Pages
 {
-    public class Hazirlik
+    public class Hazirlik : BasePage
     {
-        private readonly WiniumDriver winiumDriver;
-        //private readonly Actions actions;
-        //private String headerName;
-
         private IWebElement BtHazirlık => winiumDriver.FindElementById("Hazırlık");
         private IWebElement TxtboxGorev => winiumDriver.FindElementById("txtAAlt");
         private IWebElement BtGorevSifirla => winiumDriver.FindElementById("Sıfırla");
         private IWebElement TxtboxKalkis => winiumDriver.FindElementById("kalkis");
         private IWebElement BtKalkisSifirla => winiumDriver.FindElementById("sifirla_buton");
         private IWebElement BtKalkisSifirlaHayir => winiumDriver.FindElementById("hayır");
-
-
-        public Hazirlik(WiniumDriver _winiumDriver)
-        {
-            winiumDriver = _winiumDriver;
-            //actions = new Actions(winiumDriver);
-        }
 
         public void ClickHazirlikMenu()
         {
@@ -41,29 +30,33 @@ namespace ConsoleApp10.Pages
 
         public void GorevHazirlikGuncelle(String text)
         {
+            BtHazirlık.Click();
             TxtboxGorev.Click();
             TxtboxGorev.SendKeys(text);
             //TakeScreenshot.CaptureApp("Hazırlık-GörevHazırlık");
             //Thread.Sleep(500);
-            BtGorevSifirla.Click();
+            //BtGorevSifirla.Click();
         }
 
         public void UcusHazirlikGuncelle(String test)
         {
+            BtHazirlık.Click();
             TxtboxKalkis.Click();
             TxtboxKalkis.SendKeys(test);
             //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık");
             //Thread.Sleep(500);
-            BtKalkisSifirla.Click();
+            //BtKalkisSifirla.Click();
         }
 
         public void UcusHazirlikSıfırlaPopUp()
         {
+            BtHazirlık.Click();
             BtKalkisSifirla.Click();
             //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık-SıfırlaPopUp");
             Thread.Sleep(500);
-            BtKalkisSifirlaHayir.Click();
             //Thread.Sleep(300);
+            //BtKalkisSifirlaHayir.Click();
+
         }
     }
 }

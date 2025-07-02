@@ -20,8 +20,7 @@ namespace ConsoleApp10.Tests
         [SetUp]
         public void HazirlikSetup()
         {
-            hazirlik = new Hazirlik(driver);
-            hazirlik.ClickHazirlikMenu();
+            hazirlik = new Hazirlik();
         }
 
         [Test]

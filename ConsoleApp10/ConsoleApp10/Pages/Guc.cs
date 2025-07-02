@@ -13,24 +13,13 @@ using Winium.Cruciatus.Elements;
 
 namespace ConsoleApp10.Pages
 {
-    public class Guc
+    public class Guc : BasePage
     {
-        private readonly WiniumDriver winiumDriver;
-        private readonly CruciatusElement winiumCruciatus;
-        private readonly Actions actions;
-
         private IWebElement BtGuc => winiumDriver.FindElementById("Güc");
         private IWebElement SliderGuc => winiumDriver.FindElementById("bataryaSecimi");
         private IWebElement BtGucSistemi => winiumDriver.FindElementById("Güc_Sistemi");
         private IWebElement BtGucAyarlar => winiumDriver.FindElementById("Güc_Ayarlar");
         private IWebElement BtDurklat => winiumDriver.FindElementById("duraklatToggle");
-
-        public Guc(WiniumDriver _winiumDriver, CruciatusElement _winiumCruciatus)
-        {
-            winiumDriver = _winiumDriver;
-            winiumCruciatus = _winiumCruciatus;
-            actions = new Actions(winiumDriver);
-        }
 
         //
         // Güç başlığına tıklama
@@ -45,8 +34,10 @@ namespace ConsoleApp10.Pages
         //
         public void GucSistemBataryasi()
         {
+            BtGuc.Click();
+            BtGucSistemi.Click();
             int imageName = 1;
-            MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
+            MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
             imageName++;
             Thread.Sleep(100);
             for (int i = 0; i < 62; i++)
@@ -56,19 +47,19 @@ namespace ConsoleApp10.Pages
                 switch (i)
                 {
                     case (1):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (31):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (61):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
@@ -84,6 +75,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickGucSistemiMenu()
         {
+            BtGuc.Click();
             BtGucSistemi.Click();
         }
 
@@ -92,6 +84,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickGucAyarlarMenu()
         {
+            BtGuc.Click();
             BtGucAyarlar.Click();
         }
 
@@ -100,10 +93,12 @@ namespace ConsoleApp10.Pages
         //
         public void GucAyarlarMenu()
         {
-            MainHeaders.CreateSubFolders("Devam Et", winiumCruciatus, 3, 1);
+            BtGuc.Click();
+            BtGucAyarlar.Click();
+            MainHeaders.CreateSubFolders("Devam Et", cruciatusElement, 3, 1);
             Thread.Sleep(2500);
             BtDurklat.Click();
-            MainHeaders.CreateSubFolders("Durdur", winiumCruciatus, 3, 1);
+            MainHeaders.CreateSubFolders("Durdur", cruciatusElement, 3, 1);
         }
     }
 }

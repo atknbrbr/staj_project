@@ -112,13 +112,15 @@ namespace ConsoleApp10
             // Her bir sekme için objeler oluşturulur.
             //
             //Hazirlik hazirlik = new Hazirlik(winiumDriver);
-            Motor motor = new Motor(winiumDriver, cruciatusElement);
+            //Motor motor = new Motor();
             //Yakit yakit = new Yakit(winiumDriver);
             //Guc guc = new Guc(winiumDriver);
             //Konfigurasyon konfigurasyon = new Konfigurasyon(winiumDriver, cruciatusElement);
+
+
             //Thread.Sleep(2000);
 
-            motor.ClickMotorDiagnostikMenu();
+            //motor.ClickMotorDiagnostikMenu();
             //motor.ClickMotorMenu();
             //MainHeaders.CreateSubFolders("Motor Ana ekran", cruciatusElement, 1);
 

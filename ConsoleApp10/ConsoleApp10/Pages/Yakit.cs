@@ -12,11 +12,8 @@ using Winium.Cruciatus.Elements;
 
 namespace ConsoleApp10.Pages
 {
-    public class Yakit
+    public class Yakit : BasePage
     {
-        private readonly WiniumDriver winiumDriver;
-        private readonly CruciatusElement winiumCruciatus;
-        private String headerName;
 
         private IWebElement BtYakit => winiumDriver.FindElementById("Yakıt");
         private IWebElement BtRadio1 => winiumDriver.FindElementById("radio1");
@@ -28,12 +25,6 @@ namespace ConsoleApp10.Pages
         private IWebElement ElemComboMotor2 => winiumDriver.FindElementById("combobox_230");
 
 
-        public Yakit(WiniumDriver _winiumDriver, CruciatusElement _winiumCruciatus)
-        {
-            winiumDriver = _winiumDriver;
-            winiumCruciatus = _winiumCruciatus;
-        }
-
         public void ClickYakitMenu()
         {
             BtYakit.Click();
@@ -42,6 +33,7 @@ namespace ConsoleApp10.Pages
 
         public void ClickYakitRadioButtons()
         {
+            BtYakit.Click();
             BtRadio1.Click();
             Thread.Sleep(100);
             BtRadio2.Click();
@@ -52,17 +44,18 @@ namespace ConsoleApp10.Pages
 
         public void ClickYakitYukle(String yakit)
         {
+            BtYakit.Click();
             TxtPART.SendKeys(yakit);
             Thread.Sleep(100);
             TxtEminyet.Click();
             Thread.Sleep(50);
-            MainHeaders.CreateSubFolders("Emniyet Acik", winiumCruciatus, 2);
+            MainHeaders.CreateSubFolders("Emniyet Acik", cruciatusElement, 2);
             Thread.Sleep(100);
             BtYakitGonder.Click();
             Thread.Sleep(100);
-            MainHeaders.CreateSubFolders("Aktarim Yapiliyor", winiumCruciatus, 2);
+            MainHeaders.CreateSubFolders("Aktarim Yapiliyor", cruciatusElement, 2);
             Thread.Sleep(10000);
-            MainHeaders.CreateSubFolders("Aktarim Yapildi", winiumCruciatus, 2);
+            MainHeaders.CreateSubFolders("Aktarim Yapildi", cruciatusElement, 2);
             Thread.Sleep(250);
         }
     }

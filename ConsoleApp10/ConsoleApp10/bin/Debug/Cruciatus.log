@@ -157,3 +157,99 @@
 [10:22:45] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
 [10:22:46] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
 [10:22:46] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[10:30:55] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[10:30:57] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:30:57] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[10:30:59] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[10:31:00] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:31:00] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[10:31:12] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[10:31:13] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:31:14] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[10:31:29] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[10:31:30] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:31:31] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[10:31:37] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[10:31:38] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:31:38] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[10:31:44] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[10:31:45] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[10:31:46] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[13:28:36] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[13:28:37] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:28:37] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[13:28:39] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[13:28:40] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:28:41] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[13:28:58] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[13:28:59] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:29:00] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[13:29:17] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[13:29:19] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:29:19] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[13:29:27] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[13:29:28] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:29:28] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[13:29:36] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[13:29:37] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[13:29:37] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[14:42:59] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[14:43:00] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:00] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[14:43:02] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[14:43:03] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:03] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[14:43:18] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[14:43:19] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:19] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[14:43:37] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[14:43:38] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:39] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[14:43:46] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 228) ClickablePoint 
+[14:43:47] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:48] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 250) BoundingRectangle center 
+[14:43:55] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 274) ClickablePoint 
+[14:43:56] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[14:43:57] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 296) BoundingRectangle center 
+[15:30:22] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:30:23] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:30:24] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:31:54] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:31:55] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:31:56] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:32:54] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:32:55] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:32:56] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:34:33] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:34:34] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:34:35] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:40:09] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:40:10] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:40:11] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:40:34] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:40:35] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:40:36] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:46:45] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:46:46] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:46:46] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:48:54] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:48:55] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:48:55] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:50:42] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:50:43] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:50:43] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:51:18] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:51:19] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:51:19] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:54:48] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:54:50] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:54:50] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:55:46] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:55:47] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:55:47] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:57:48] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:57:49] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:57:49] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
+[15:58:28] [Info] Click on 'type: ControlType.ComboBox, uid: KonfigurasyonCombobox' element at (323, 183) ClickablePoint 
+[15:58:29] [Debug] Element 'type: ControlType.ListItem, name: Var' not have ClickablePoint 
+[15:58:29] [Info] Click on 'type: ControlType.ListItem, name: Var' element at (323, 205) BoundingRectangle center 
