@@ -17,8 +17,9 @@ namespace ConsoleApp10.Utils
 
         public static void CheckSliders(CruciatusElement cruciatusElement, Actions actions, IWebElement slider1, int a, int b, int c)
         {
-            MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
-            fileName++;
+            //MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
+            //fileName++;
+
             //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
             ustLimit = a;
             altLimit = b;
@@ -28,7 +29,7 @@ namespace ConsoleApp10.Utils
             {
                 if (ustLimit < 0)
                 {
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -40,7 +41,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -50,7 +51,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -60,7 +61,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -75,7 +76,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
@@ -87,7 +88,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -97,7 +98,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
@@ -112,7 +113,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
@@ -124,7 +125,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -134,7 +135,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -148,7 +149,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -159,7 +160,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
@@ -170,7 +171,7 @@ namespace ConsoleApp10.Utils
                     {
                         actions.Click().Perform();
                     }
-                    MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 1, "Diagnostik-" + fileName.ToString());
+                    MainHeaders.CreateSubFolders(fileName.ToString(), cruciatusElement, 1, 0, 1);
                     //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }

@@ -46,7 +46,7 @@ namespace ConsoleApp10.Pages
         public void GucSistemBataryasi()
         {
             int imageName = 1;
-            TakeScreenshot.CaptureApp("Güç-Güç Sistemi-Batarya-" + imageName.ToString());
+            MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
             imageName++;
             Thread.Sleep(100);
             for (int i = 0; i < 62; i++)
@@ -56,19 +56,19 @@ namespace ConsoleApp10.Pages
                 switch (i)
                 {
                     case (1):
-                        TakeScreenshot.CaptureApp("Güç-Güç Sistemi-Batarya-" + imageName.ToString());
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (31):
-                        TakeScreenshot.CaptureApp("Güç-Güç Sistemi-Batarya-" + imageName.ToString());
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (61):
-                        TakeScreenshot.CaptureApp("Güç-Güç Sistemi-Batarya-" + imageName.ToString());
+                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), winiumCruciatus, 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
@@ -100,10 +100,10 @@ namespace ConsoleApp10.Pages
         //
         public void GucAyarlarMenu()
         {
-            TakeScreenshot.CaptureApp("Güç-Güç Ayarlar-Devam Et.");
+            MainHeaders.CreateSubFolders("Devam Et", winiumCruciatus, 3, 1);
             Thread.Sleep(2500);
             BtDurklat.Click();
-            TakeScreenshot.CaptureApp("Güç-Güç Ayarlar-Durdur.");
+            MainHeaders.CreateSubFolders("Durdur", winiumCruciatus, 3, 1);
         }
     }
 }

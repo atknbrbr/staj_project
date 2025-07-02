@@ -109,16 +109,16 @@ namespace ConsoleApp10.Pages
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
-            TakeScreenshot.CaptureApp("Konfigürasyon-Pop Up-" + imageName.ToString());
+            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), winiumCruciatus, 4);
             imageName++;
             BtInfoYesil.Click();
-            TakeScreenshot.CaptureApp("Konfigürasyon-Pop Up-" + imageName.ToString());
+            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), winiumCruciatus, 4);
             imageName++;
             BtInfoSari.Click();
-            TakeScreenshot.CaptureApp("Konfigürasyon-Pop Up-" + imageName.ToString());
+            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), winiumCruciatus, 4);
             imageName++;
             BtInfoKirmizi.Click();
-            TakeScreenshot.CaptureApp("Konfigürasyon-Pop Up-" + imageName.ToString());
+            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), winiumCruciatus, 4);
             imageName++;
         }
 

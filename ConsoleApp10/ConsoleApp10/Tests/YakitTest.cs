@@ -19,13 +19,13 @@ namespace ConsoleApp10.Tests
         public void YakitSetup() 
         {
             yakit = new Yakit(driver, cruciatusElement);
+            yakit.ClickYakitMenu();
         }
 
         [Test]
         public void ClickYakitMenuTest()
         {
-            yakit.ClickYakitMenu();
-            TakeScreenshot.CaptureApp("Yakıt");
+            MainHeaders.CreateSubFolders("Yakıt", cruciatusElement, 2);
             Thread.Sleep(500);
         }
 
@@ -33,7 +33,7 @@ namespace ConsoleApp10.Tests
         public void ClickYakitRadioButtonsTest()
         {
             yakit.ClickYakitRadioButtons();
-            TakeScreenshot.CaptureApp("Yakıt-RadioButon");
+            MainHeaders.CreateSubFolders("Radio Buton", cruciatusElement, 2);
             Thread.Sleep(500);
         }
 

@@ -21,6 +21,7 @@ namespace ConsoleApp10.Tests
         public void HazirlikSetup()
         {
             hazirlik = new Hazirlik(driver);
+            hazirlik.ClickHazirlikMenu();
         }
 
         [Test]
@@ -28,7 +29,7 @@ namespace ConsoleApp10.Tests
         {
             hazirlik.ClickHazirlikMenu();
             //TakeScreenshot.CaptureApp("Hazırlık");
-            MainHeaders.CreateSubFolders(cruciatusElement,0,0,0,"Hazırlık ana ekran");
+            MainHeaders.CreateSubFolders("Hazırlık ana ekran", cruciatusElement, 0);
             Thread.Sleep(500);
         }
 
@@ -36,7 +37,7 @@ namespace ConsoleApp10.Tests
         public void GorevHazirlikGuncelle()
         {
             hazirlik.GorevHazirlikGuncelle("123");
-            MainHeaders.CreateSubFolders(cruciatusElement, 0, 0, 0, "Görev Hazırlık");
+            MainHeaders.CreateSubFolders("Görev Hazırlık", cruciatusElement, 0);
             Thread.Sleep(500);
         }
 
@@ -44,7 +45,7 @@ namespace ConsoleApp10.Tests
         public void UcusHazirlikGuncelle()
         {
             hazirlik.UcusHazirlikGuncelle("123");
-            MainHeaders.CreateSubFolders(cruciatusElement, 0, 0, 0, "Uçuş Hazırlık");
+            MainHeaders.CreateSubFolders("Uçuş Hazırlık", cruciatusElement, 0);
             Thread.Sleep(500);
         }
 
@@ -53,7 +54,7 @@ namespace ConsoleApp10.Tests
         public void UcusHazirlikSıfırlaPopUp()
         {
             hazirlik.UcusHazirlikSıfırlaPopUp();
-            MainHeaders.CreateSubFolders(cruciatusElement, 0, 0, 0, "Uçuş Hazırlık-Sıfırla Pop Up");
+            MainHeaders.CreateSubFolders("Uçuş Hazırlık-Sıfırla Pop Up", cruciatusElement, 0);
             Thread.Sleep(500);
 
         }

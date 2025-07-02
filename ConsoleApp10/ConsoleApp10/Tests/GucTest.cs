@@ -18,13 +18,14 @@ namespace ConsoleApp10.Tests
         public void GucSetup()
         {
             guc = new Guc(driver, cruciatusElement);
+            guc.ClickGucMenu();
         }
 
         [Test]
         public void ClickGucMenuTest()
         {
             guc.ClickGucMenu();
-            TakeScreenshot.CaptureApp("Güç");
+            MainHeaders.CreateSubFolders("Güç", cruciatusElement, 3, 0);
             Thread.Sleep(500);
         }
 
@@ -32,7 +33,6 @@ namespace ConsoleApp10.Tests
         public void GucSistemBataryasiTest()
         {
             guc.GucSistemBataryasi();
-            TakeScreenshot.CaptureApp("Güç");
             Thread.Sleep(500);
         }
 
@@ -40,7 +40,7 @@ namespace ConsoleApp10.Tests
         public void ClickGucSistemiMenuTest()
         {
             guc.ClickGucSistemiMenu();
-            TakeScreenshot.CaptureApp("Güç-Güç Sistemi");
+            MainHeaders.CreateSubFolders("Güç Sistemi", cruciatusElement, 3, 0);
             Thread.Sleep(500);
         }
 
@@ -48,7 +48,7 @@ namespace ConsoleApp10.Tests
         public void ClickGucAyarlarMenuTest()
         {
             guc.ClickGucAyarlarMenu();
-            TakeScreenshot.CaptureApp("Güç-Güç Ayarlar");
+            MainHeaders.CreateSubFolders("Güç Ayarlar", cruciatusElement, 3, 1);
             Thread.Sleep(500);
         }
 
@@ -56,7 +56,6 @@ namespace ConsoleApp10.Tests
         public void GucAyarlarMenuTest()
         {
             guc.GucAyarlarMenu();
-            TakeScreenshot.CaptureApp("Güç");
             Thread.Sleep(500);
         }
     }

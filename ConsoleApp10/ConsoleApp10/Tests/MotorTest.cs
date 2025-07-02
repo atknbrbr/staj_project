@@ -19,6 +19,7 @@ namespace ConsoleApp10.Tests
         public void MotorSetup()
         {
             motor = new Motor(driver, cruciatusElement);
+            motor.ClickMotorMenu();
         }
 
         [Test]
@@ -26,7 +27,8 @@ namespace ConsoleApp10.Tests
         {
             motor.ClickMotorMenu();
             //TakeScreenshot.CaptureApp("Motor");
-            MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 0, "Motor");
+
+            MainHeaders.CreateSubFolders("Motor", cruciatusElement, 1);
             Thread.Sleep(500);
         }
 
@@ -34,7 +36,7 @@ namespace ConsoleApp10.Tests
         public void ClickMotorGostergelerTabloTest()
         {
             motor.ClickMotorGostergelerTablo();
-            MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 0, "Tablo Göster");
+            MainHeaders.CreateSubFolders("Tablo Göster", cruciatusElement, 1, 0, 0);
             Thread.Sleep(500);
         }
 
@@ -42,7 +44,7 @@ namespace ConsoleApp10.Tests
         public void ClickMotorGostergelerSecimTest()
         {
             motor.ClickMotorGostergelerSecim("irtifa_radiobuton");
-            MainHeaders.CreateSubFolders(cruciatusElement, 1, 0, 0, "Seçilen Değer");
+            MainHeaders.CreateSubFolders("Seçilen Değer", cruciatusElement, 1, 0, 0);
             Thread.Sleep(500);
         }
 
@@ -64,7 +66,7 @@ namespace ConsoleApp10.Tests
         public void ClickMotorAyarlarMenuTest()
         {
             motor.ClickMotorAyarlarMenu();
-            MainHeaders.CreateSubFolders(cruciatusElement, 1, 1, 0, "Motor Ayarlar");
+            MainHeaders.CreateSubFolders("Motor Ayarlar", cruciatusElement, 1, 1);
             Thread.Sleep(500);
         }
     }

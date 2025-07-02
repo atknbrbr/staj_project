@@ -106,16 +106,16 @@ namespace ConsoleApp10.Pages
             {
                 ComboMotorAyar1.Click();
                 ComboMotorAyar1.Click();
-                MainHeaders.CreateSubFolders(winiumCruciatus, 1, 0, 0, "Motor Ayarları-1");
+                MainHeaders.CreateSubFolders("Motor Ayarları-1", winiumCruciatus, 1, 0, 0);
                 Thread.Sleep(500);
                 ElemComboMotor1.Click();
                 Thread.Sleep(200);
                 ComboMotorAyar2.Click();
-                MainHeaders.CreateSubFolders(winiumCruciatus, 1, 0, 0, "Motor Ayarları-2");
+                MainHeaders.CreateSubFolders("Motor Ayarları-2", winiumCruciatus, 1, 0, 0);
                 Thread.Sleep(500);
                 ElemComboMotor2.Click();
                 Thread.Sleep(200);
-                MainHeaders.CreateSubFolders(winiumCruciatus, 1, 0, 0, "Motor Ayarları-3");
+                MainHeaders.CreateSubFolders("Motor Ayarları-3", winiumCruciatus, 1, 0, 0);
 
                 Thread.Sleep(500);
                 return true;
@@ -150,17 +150,17 @@ namespace ConsoleApp10.Pages
                         
                         // Rüzgar Hızı
                         case 4:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderHava, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderRuzgar, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Ortam Sıcaklığı
                         case 8:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderHava, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderSicaklık, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Motor Devri
                         case 12:
-                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderHava, ustLimit, altLimit, guncelDeger);
+                            SliderCalculation.CheckSliders(winiumCruciatus, actions, SliderMotor, ustLimit, altLimit, guncelDeger);
                             continue;
 
                         default:

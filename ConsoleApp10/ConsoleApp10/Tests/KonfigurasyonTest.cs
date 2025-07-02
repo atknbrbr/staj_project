@@ -27,7 +27,7 @@ namespace ConsoleApp10.Tests
         public void ClickKonfigurasyonMenuTest()
         {
             konfigurasyon.ClickKonfigurasyonMenu();
-            TakeScreenshot.CaptureApp("Konfigurasyon");
+            MainHeaders.CreateSubFolders("Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
@@ -35,7 +35,7 @@ namespace ConsoleApp10.Tests
         public void ClickKameraHepsiYokTest()
         {
             konfigurasyon.ClickKameraHepsiYok();
-            MainHeaders.CreateSubFolders(cruciatusElement, 4, 0, 0, "Kamera1");
+            MainHeaders.CreateSubFolders("Kamera Test(Tum konfigurasyonlar kapalı)", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
@@ -43,7 +43,7 @@ namespace ConsoleApp10.Tests
         public void KonfigurasyonGonderListviewVarTest()
         {
             konfigurasyon.KonfigurasyonGonderListviewVar();
-            TakeScreenshot.CaptureApp("Konfigurasyon-ListView Var");
+            MainHeaders.CreateSubFolders("ListView Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
@@ -51,7 +51,7 @@ namespace ConsoleApp10.Tests
         public void KonfigurasyonGonderPopUpVarTest()
         {
             konfigurasyon.KonfigurasyonGonderPopUpVar();
-            TakeScreenshot.CaptureApp("Konfigurasyon-Pop Up Var");
+            MainHeaders.CreateSubFolders("Pop Up Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
@@ -59,7 +59,7 @@ namespace ConsoleApp10.Tests
         public void KonfigurasyonGonderSekmeVarTest()
         {
             konfigurasyon.KonfigurasyonGonderSekmeVar();
-            TakeScreenshot.CaptureApp("Konfigurasyon-Sekme Gönderme Var");
+            MainHeaders.CreateSubFolders("Sekme Gonder Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
@@ -75,7 +75,8 @@ namespace ConsoleApp10.Tests
         public void ClickKameraListViewAcikTest()
         {
             konfigurasyon.ClickKameraListViewAcik();
-            TakeScreenshot.CaptureApp("Konfigurasyon-ListView Açıkken Kamera Bağlantı");
+            MainHeaders.CreateSubFolders("ListView Açıkken Kamera Bağlantı", cruciatusElement, 4);
+            //TakeScreenshot.CaptureApp("Konfigurasyon-ListView Açıkken Kamera Bağlantı");
             Thread.Sleep(500);
         }
 
@@ -83,7 +84,7 @@ namespace ConsoleApp10.Tests
         public void KonfigurasyonGonderHepsiYokTest()
         {
             konfigurasyon.KonfigurasyonGonderHepsiYok();
-            TakeScreenshot.CaptureApp("Konfigurasyon-Konfigurasyon gönder(Tüm seçenekler yok)");
+            MainHeaders.CreateSubFolders("Konfigurasyon gönder(Tüm seçenekler yok)", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 

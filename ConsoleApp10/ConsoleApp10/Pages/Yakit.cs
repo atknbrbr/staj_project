@@ -56,13 +56,13 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(100);
             TxtEminyet.Click();
             Thread.Sleep(50);
-            TakeScreenshot.CaptureApp("Yakıt-EmniyetAcik");
+            MainHeaders.CreateSubFolders("Emniyet Acik", winiumCruciatus, 2);
             Thread.Sleep(100);
             BtYakitGonder.Click();
             Thread.Sleep(100);
-            TakeScreenshot.CaptureApp("Yakıt-AktarimYapiliyor");
+            MainHeaders.CreateSubFolders("Aktarim Yapiliyor", winiumCruciatus, 2);
             Thread.Sleep(10000);
-            TakeScreenshot.CaptureApp("Yakıt-AktarimYapildi");
+            MainHeaders.CreateSubFolders("Aktarim Yapildi", winiumCruciatus, 2);
             Thread.Sleep(250);
         }
     }

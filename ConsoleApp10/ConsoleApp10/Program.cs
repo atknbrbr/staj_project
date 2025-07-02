@@ -90,13 +90,15 @@ namespace ConsoleApp10
             //
             // Uygulama, tam ekran hale getirilir.
             //
-            SetFullscreen.Fullscreen();
+            //SetFullscreen.Fullscreen();
 
 
 
-            var headerButtons = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("//*[@ClassName='Button']"))
-                                                .ToList()
-                                                .Where(x => x.Properties.BoundingRectangle.Top == 29);
+            MainHeaders.GetMainHeaders(cruciatusElement);
+
+            //var headerButtons = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("//*[@ClassName='Button']"))
+            //                                    .ToList()
+            //                                    .Where(x => x.Properties.BoundingRectangle.Top == 36);
 
 
             //List<Headers> headers = new List<Headers>();
@@ -110,34 +112,39 @@ namespace ConsoleApp10
             // Her bir sekme için objeler oluşturulur.
             //
             //Hazirlik hazirlik = new Hazirlik(winiumDriver);
-            //Motor motor = new Motor(winiumDriver);
+            Motor motor = new Motor(winiumDriver, cruciatusElement);
             //Yakit yakit = new Yakit(winiumDriver);
             //Guc guc = new Guc(winiumDriver);
             //Konfigurasyon konfigurasyon = new Konfigurasyon(winiumDriver, cruciatusElement);
             //Thread.Sleep(2000);
 
+            motor.ClickMotorDiagnostikMenu();
+            //motor.ClickMotorMenu();
+            //MainHeaders.CreateSubFolders("Motor Ana ekran", cruciatusElement, 1);
+
+
             //konfigurasyon.ClickKonfigurasyonMenu();
             //konfigurasyon.KonfigurasyonGonderSekmeVar();
 
 
-            winiumDriver.FindElementById("Konfigurasyon").Click();
-            var listOfCombos = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']"))
-                                            .FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
-            foreach (CruciatusElement x in listOfCombos)
-            {
-               // x.FindElementByUid("KonfigurasyonCombobox").Click();
-                Thread.Sleep(1000);
-                var secenekler = x.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
-                var cocuklar = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
-                cocuklar[0].Click();
-                Thread.Sleep(1000);
-                //secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ScrollViewer']"));
-                Thread.Sleep(1000);
-            }
+            //winiumDriver.FindElementById("Konfigurasyon").Click();
+            //var listOfCombos = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']"))
+            //                                .FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
+            //foreach (CruciatusElement x in listOfCombos)
+            //{
+            //   // x.FindElementByUid("KonfigurasyonCombobox").Click();
+            //    Thread.Sleep(1000);
+            //    var secenekler = x.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
+            //    var cocuklar = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
+            //    cocuklar[0].Click();
+            //    Thread.Sleep(1000);
+            //    //secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ScrollViewer']"));
+            //    Thread.Sleep(1000);
+            //}
 
 
-                                                //            .FindElement(Winium.Cruciatus.Core.By.XPath("*[@AutomationId='DropDownScrollViewer']"))
-                                                //.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']"))
+            //            .FindElement(Winium.Cruciatus.Core.By.XPath("*[@AutomationId='DropDownScrollViewer']"))
+            //.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']"))
 
             //
             // HAZIRLIK İŞLEMLERİ
@@ -166,7 +173,7 @@ namespace ConsoleApp10
             //motor.ClickMotorGostergelerMotorAyarlari();
             //Thread.Sleep(350);
             //motor.ClickMotorDiagnostikMenu(cruciatusElement);
-            Thread.Sleep(350);
+            //Thread.Sleep(350);
             //motor.ClickMotorAyarlarMenu();
             //Thread.Sleep(350);
 
@@ -186,8 +193,8 @@ namespace ConsoleApp10
             //guc.GucSistemBataryasi();
             //guc.ClickGucAyarlarMenu();
             //guc.GucAyarlarMenu();
-            
-         
+
+
         }
     }
 }
