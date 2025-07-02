@@ -1,0 +1,57 @@
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\NLog.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\WindowsInput.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Cruciatus.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Elements.Desktop.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.WebDriver.dll
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\NLog.xml
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.xml
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\WindowsInput.xml
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Cruciatus.xml
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csproj.AssemblyReference.cache
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csproj.CoreCompileInputs.cache
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleA.CEDFF6D4.Up2Date
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
+C:\Users\PC_3462\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\NLog.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WindowsInput.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Cruciatus.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\NLog.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WindowsInput.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Cruciatus.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csproj.AssemblyReference.cache
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csproj.CoreCompileInputs.cache
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleA.CEDFF6D4.Up2Date
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Buffers.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Memory.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Text.Json.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.ValueTuple.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Buffers.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Memory.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Text.Json.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\System.ValueTuple.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.Support.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.Elements.Desktop.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\Winium.WebDriver.dll
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\bin\Debug\WebDriver.Support.xml
+C:\Users\PC_7583\Documents\test project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe.config

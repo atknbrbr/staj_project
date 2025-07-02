@@ -1,0 +1,1648 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winium.Cruciatus</name>
+    </assembly>
+    <members>
+        <member name="T:Winium.Cruciatus.Application">
+            <summary>
+            Класс для запуска и завершения приложения.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Application.#ctor(System.String)">
+            <summary>
+            Создает объект класса.
+            </summary>
+            <param name="executableFilePath">
+            Полный путь до исполняемого файла.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Application.Close">
+            <summary>
+            Посылает сообщение о закрытии главному окну приложения.
+            </summary>
+            <returns>
+            true если приложение завершилось и false в противном случае.
+            </returns>
+        </member>
+        <member name="M:Winium.Cruciatus.Application.Kill">
+            <summary>
+            Убивает приложение.
+            </summary>
+            <returns>
+            true если приложение завершилось и false в противном случае.
+            </returns>
+        </member>
+        <member name="M:Winium.Cruciatus.Application.Start">
+            <summary>
+            Запускает исполняемый файл.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Application.Start(System.String)">
+            <summary>
+            Запускает исполняемый файл с аргументами.
+            </summary>
+            <param name="arguments">
+            Строка аргументов запуска приложения.
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.ByProperty">
+            <summary>
+            Класс-конструктор стратегии поиска элементов по AutomationProperty.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.By">
+            <summary>
+            Конструктор стратегии поиска элементов.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.AutomationProperty(System.Windows.Automation.AutomationProperty,System.Object)">
+            <summary>
+            Поиск по AutomationProperty. 
+            Требуется подключить ссылку на UIAutomationClient.
+            </summary>
+            <param name="property">
+            Целевое свойство.
+            </param>
+            <param name="value">
+            Значение целевого свойства.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.AutomationProperty(System.Windows.Automation.TreeScope,System.Windows.Automation.AutomationProperty,System.Object)">
+            <summary>
+            Поиск по AutomationProperty с заданием глубины. 
+            Требуется подключить ссылку на UIAutomationClient.
+            </summary>
+            <param name="scope">
+            Глубина поиска.
+            </param>
+            <param name="property">
+            Целевое свойство.
+            </param>
+            <param name="value">
+            Значение целевого свойства.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.Name(System.String)">
+            <summary>
+            Поиск по Name.
+            </summary>
+            <param name="value">
+            Имя элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.Name(System.Windows.Automation.TreeScope,System.String)">
+            <summary>
+            Поиск по Name с заданием глубины.
+            </summary>
+            <param name="scope">
+            Глубина поиска.
+            </param>
+            <param name="value">
+            Имя элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.Uid(System.String)">
+            <summary>
+            Поиск по  AutomationId.
+            </summary>
+            <param name="value">
+            Уникальный идентификатор элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.Uid(System.Windows.Automation.TreeScope,System.String)">
+            <summary>
+            Поиск по AutomationId.
+            </summary>
+            <param name="scope">
+            Глубина поиска.
+            </param>
+            <param name="value">
+            Уникальный идентификатор элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.XPath(System.String)">
+            <summary>
+            Поиск по  XPath.
+            </summary>
+            <param name="value">
+            Путь до файла в формате XPath.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.By.ToString">
+            <summary>
+            Возвращает строковое представление стратегии поиска.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByProperty.And(System.Windows.Automation.AutomationProperty,System.Object)">
+            <summary>
+            Уточнить поиск по AutomationProperty через логическое И. 
+            Требуется подключить ссылку на UIAutomationClient.
+            </summary>
+            <param name="property">
+            Целевое свойство.
+            </param>
+            <param name="value">
+            Значение целевого свойства.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByProperty.AndType(System.Windows.Automation.ControlType)">
+            <summary>
+            Уточнить поиск по ControlType через логическое И.
+            </summary>
+            <param name="value">
+            Тип элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByProperty.Or(System.Windows.Automation.AutomationProperty,System.Object)">
+            <summary>
+            Уточнить поиск по AutomationProperty через логическое ИЛИ. 
+            Требуется подключить ссылку на UIAutomationClient.
+            </summary>
+            <param name="property">
+            Целевое свойство.
+            </param>
+            <param name="value">
+            Значение целевого свойства.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByProperty.OrName(System.String)">
+            <summary>
+            Уточнить поиск по Name элемента через логическое ИЛИ.
+            </summary>
+            <param name="value">
+            Имя элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByProperty.ToString">
+            <summary>
+            Возвращает строковое представление стратегии поиска.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.ByXPath">
+            <summary>
+            Класс-конструктор стратегии поиска элементов по XPath.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.ByXPath.ToString">
+            <summary>
+            Возвращает строковое представление стратегии поиска.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.DisplayOrientation">
+            <summary>
+            Represents the orientation of the screen
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.RotationManager">
+            <summary>
+            A static class for retreiving and updating the device orientation
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.RotationManager.GetCurrentOrientation">
+            <summary>
+            Gets the current orientation of the primary screen
+            </summary>
+            <returns>The orientation of the primary screen</returns>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.RotationManager.SetOrientation(Winium.Cruciatus.Core.DisplayOrientation)">
+            <summary>
+            Sets the orientation of the primary screen
+            </summary>
+            <param name="orientation">The desired orientation</param>
+            <returns>
+            The result of setting the orientation:
+              0: Success or no change required
+              1: A device restart is required
+              -2: The device does not support this orientation
+              Any other number: Unknown error 
+            </returns>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.ClickStrategies">
+            <summary>
+            Перечисление поддерживаемых стратегий клика. Имеет атрибут Flags.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ClickStrategies.None">
+            <summary>
+            Отсутствие определенной стратегии.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ClickStrategies.ClickablePoint">
+            <summary>
+            Стратегия использования свойства элемента ClickablePoint.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ClickStrategies.BoundingRectangleCenter">
+            <summary>
+            Стратегия использования свойства элемента BoundingRectangle.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ClickStrategies.InvokePattern">
+            <summary>
+            Стратегия использования интерфейса InvokePattern.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.CruciatusElementProperties">
+            <summary>
+            Класс свойств CruciatusElement.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.BoundingRectangle">
+            <summary>
+            Свойство BoundingRectangle.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.ClickablePoint">
+            <summary>
+            Свойство ClickablePoint. Внимание, значение может отсутствовать.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.IsEnabled">
+            <summary>
+            Свойство IsEnabled.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.IsOffscreen">
+            <summary>
+            Свойство IsOffscreen.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.Name">
+            <summary>
+            Свойство Name.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.CruciatusElementProperties.RuntimeId">
+            <summary>
+            Строковое представление RuntimeId элемента.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.ExpandStrategy">
+            <summary>
+            Перечисление поддерживаемых стратегий раскрытия выпадающего элемента.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ExpandStrategy.Click">
+            <summary>
+            Стратегия раскрытия через клик по элементу.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.ExpandStrategy.ExpandCollapsePattern">
+            <summary>
+            Стратегия использования интерфейса ExpandCollapsePattern.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.IScreenshoter">
+            <summary>
+            Интерфейс снимателя скриншотов.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IScreenshoter.GetScreenshot">
+            <summary>
+            Возвращает скриншот рабочего стола.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.Screenshot">
+            <summary>
+            Класс описывающий скриншот.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.Screenshot.AsBase64String">
+            <summary>
+            Возвращает скриншот в виде base64 строки.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.Screenshot.AsByteArray">
+            <summary>
+            Возвращает скриншот в виде массива байт.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.Screenshot.SaveAsFile(System.String)">
+            <summary>
+            Сохраняет скриншот в заданный файл.
+            </summary>
+            <param name="filePath">
+            Путь до файла.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.Screenshot.ToString">
+            <summary>
+            Возвращает скриншот в виде base64 строки.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.Screenshoter">
+            <summary>
+            Класс для создания скриншотов рабочего стола.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.Screenshoter.GetScreenshot">
+            <summary>
+            Возвращает скриншот рабочего стола.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.SendKeysExt">
+            <summary>
+            Симулятор клавиатуры. Обёртка над System.Windows.Forms.SendKeys .
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.IKeyboard">
+            <summary>
+            Интерфейс симулятора клавиатуры.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.KeyDown(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'нажать и держать' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.KeyUp(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'отпустить' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendBackspace">
+            <summary>
+            Эмулирует нажатие кнопки Backspace.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendCtrlA">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + A.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendCtrlC">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + C.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendCtrlV">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + V.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendEnter">
+            <summary>
+            Эмулирует нажатие кнопки Enter.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendEscape">
+            <summary>
+            Эмулирует нажатие кнопки Escape.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.IKeyboard.SendText(System.String)">
+            <summary>
+            Эмулирует ввод текста.
+            </summary>
+            <param name="text">
+            Текст.
+            </param>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Alt">
+            <summary>
+            Кнопка Alt.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Backspace">
+            <summary>
+            Кнопка Backspace.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Ctrl">
+            <summary>
+            Кнопка Ctrl.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Enter">
+            <summary>
+            Кнопка Enter.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Escape">
+            <summary>
+            Кнопка Escape.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.SendKeysExt.Shift">
+            <summary>
+            Кнопка +
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.KeyDown(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'нажать и держать' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.KeyUp(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'отпустить' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendBackspace">
+            <summary>
+            Эмулирует нажатие кнопки Backspace.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendCtrlA">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + A.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendCtrlC">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + C.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendCtrlV">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + V.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendEnter">
+            <summary>
+            Эмулирует нажатие кнопки Enter.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendEscape">
+            <summary>
+            Эмулирует нажатие кнопки Escape.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.SendKeysExt.SendText(System.String)">
+            <summary>
+            Эмулирует ввод текста.
+            </summary>
+            <param name="text">
+            Текст.
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.GetTextStrategies">
+            <summary>
+            Перечисление поддерживаемых стратегий получения текста. Имеет атрибут Flags.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.GetTextStrategies.None">
+            <summary>
+            Отсутствие определенной стратегии.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.GetTextStrategies.TextPattern">
+            <summary>
+            Стратегия использования интерфейса TextPattern.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.GetTextStrategies.ValuePattern">
+            <summary>
+            Стратегия использования интерфейса ValuePattern.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.KeyboardSimulatorExt">
+            <summary>
+            Симулятор клавиатуры. Обёртка над WindowsInput.KeyboardSimulator .
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.KeyDown(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'нажать и держать' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.KeyPress(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'нажать и отпустить' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.KeyPressSimultaneous(WindowsInput.Native.VirtualKeyCode,WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует нажатие сочетания двух кнопок keyCode1 + keyCode2.
+            </summary>
+            <param name="keyCode1">
+            Ключ первой целевой кнопки.
+            </param>
+            <param name="keyCode2">
+            Ключ второй целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.KeyPressSimultaneous(WindowsInput.Native.VirtualKeyCode,WindowsInput.Native.VirtualKeyCode,WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует нажатие сочетания трёх кнопок keyCode1 + keyCode2 + keyCode3.
+            </summary>
+            <param name="keyCode1">
+            Ключ первой целевой кнопки.
+            </param>
+            <param name="keyCode2">
+            Ключ второй целевой кнопки.
+            </param>
+            <param name="keyCode3">
+            Ключ третьей целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.KeyUp(WindowsInput.Native.VirtualKeyCode)">
+            <summary>
+            Эмулирует действие 'отпустить' над кнопкой.
+            </summary>
+            <param name="keyCode">
+            Ключ целевой кнопки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendBackspace">
+            <summary>
+            Эмулирует нажатие кнопки Backspace.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendCtrlA">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + A.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendCtrlC">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + C.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendCtrlV">
+            <summary>
+            Эмулирует нажатие сочетания кнопок Ctrl + V.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendEnter">
+            <summary>
+            Эмулирует нажатие кнопки Enter.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendEscape">
+            <summary>
+            Эмулирует нажатие кнопки Escape.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.KeyboardSimulatorExt.SendText(System.String)">
+            <summary>
+            Эмулирует ввод текста.
+            </summary>
+            <param name="text">
+            Текст.
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.MouseSimulatorExt">
+            <summary>
+            Симулятор мыши. Обёртка над WindowsInput.MouseSimulator .
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.Click(Winium.Cruciatus.Core.MouseButton)">
+            <summary>
+            Эмулирует клик в текущем положении курсора.
+            </summary>
+            <param name="button">
+            Целевая кнопка.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.Click(Winium.Cruciatus.Core.MouseButton,System.Double,System.Double)">
+            <summary>
+            Эмулирует клик в заданные координаты.
+            </summary>
+            <param name="button">
+            Целевая кнопка.
+            </param>
+            <param name="x">
+            Координата точки по оси X.
+            </param>
+            <param name="y">
+            Координата точки по оси Y.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.DoubleClick(Winium.Cruciatus.Core.MouseButton)">
+            <summary>
+            Эмулирует двойной клик в текущем положении курсора.
+            </summary>
+            <param name="button">
+            Целевая кнопка.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.DoubleClick(Winium.Cruciatus.Core.MouseButton,System.Double,System.Double)">
+            <summary>
+            Эмулирует двойной клик в заданные точку.
+            </summary>
+            <param name="button">
+            Целевая кнопка.
+            </param>
+            <param name="x">
+            Координата точки по оси X.
+            </param>
+            <param name="y">
+            Координата точки по оси Y.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.LeftButtonClick">
+            <summary>
+            Эмулярует клик левой кнопки мыши в текущем положении курсора.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.LeftButtonDoubleClick">
+            <summary>
+            Эмулярует двойной клик левой кнопки мыши в текущем положении курсора.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.MoveCursorPos(System.Double,System.Double)">
+            <summary>
+            Перемещает курсор на заданное смещение по каждой координате.
+            </summary>
+            <param name="x">
+            Смещение по оси X (в пикселях).
+            </param>
+            <param name="y">
+            Смещение по оси Y (в пикселях).
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.RightButtonClick">
+            <summary>
+            Эмулярует клик правой кнопки мыши в текущем положении курсора.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.RightButtonDoubleClick">
+            <summary>
+            Эмулярует двойной клик правой кнопки мыши в текущем положении курсора.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.SetCursorPos(System.Double,System.Double)">
+            <summary>
+            Устанавливает курсор в заданную точку.
+            </summary>
+            <param name="x">
+            Координата точки по оси X.
+            </param>
+            <param name="y">
+            Координата точки по оси Y.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Core.MouseSimulatorExt.VerticalScroll(System.Int32)">
+            <summary>
+            Эмулирует вертикальную прокрутку.
+            </summary>
+            <param name="amountOfClicks">
+            Количество кручений в кликах. Положительное значение - вверх, отрицательное - вниз.
+            </param>
+        </member>
+        <member name="P:Winium.Cruciatus.Core.MouseSimulatorExt.CurrentCursorPos">
+            <summary>
+            Текущее положение курсора.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Core.MouseButton">
+            <summary>
+            Перечисление поддерживаемых кнопок мыши.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.MouseButton.Left">
+            <summary>
+            Левая кнопка мыши.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Core.MouseButton.Right">
+            <summary>
+            Правая кнопка мыши.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.CruciatusFactory">
+            <summary>
+            Класс доступа к инфраструктуре Cruciatus.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.CruciatusFactory.GetSpecificKeyboard(Winium.Cruciatus.Settings.KeyboardSimulatorType)">
+            <summary>
+            Возвращает специфичный симулятор клавиатуры по заданному типу.
+            </summary>
+            <param name="keyboardSimulatorType">
+            Тип симулятора клавиатуры.
+            </param>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.FocusedElement">
+            <summary>
+            Возвращает элемент находящийся в фокусе.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Keyboard">
+            <summary>
+            Возвращает текущий симулятор клавиатуры.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Logger">
+            <summary>
+            Возвращает объект, используемый для ведения логов.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Mouse">
+            <summary>
+            Возвращает симулятор мыши.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Root">
+            <summary>
+            Возвращает корневой элемент - Рабочий стол.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Screenshoter">
+            <summary>
+            Возвращает объект, используемый для снятия скриншотов.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.CruciatusFactory.Settings">
+            <summary>
+            Возвращает объект по управлению настройками Crucaitus.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.Menu">
+            <summary>
+            Элемент меню.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.CruciatusElement">
+            <summary>
+            Базовый элемент управления.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр элемента.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр элемента. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="findStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Click">
+            <summary>
+            Клик по элементу.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Click(Winium.Cruciatus.Core.MouseButton)">
+            <summary>
+            Клик по элементу.
+            </summary>
+            <param name="button">
+            Используемая кнопка мыши.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Click(Winium.Cruciatus.Core.MouseButton,Winium.Cruciatus.Core.ClickStrategies)">
+            <summary>
+            Клик по элементу.
+            </summary>
+            <param name="button">
+            Используемая кнопка мыши.
+            </param>
+            <param name="strategy">
+            Стратегия клика.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Click(Winium.Cruciatus.Core.MouseButton,Winium.Cruciatus.Core.ClickStrategies,System.Boolean)">
+            <summary>
+            Клик по элементу.
+            </summary>
+            <param name="button">
+            Используемая кнопка мыши.
+            </param>
+            <param name="strategy">
+            Стратегия клика.
+            </param>
+            <param name="doubleClick">
+            Флаг двойного клика.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.DoubleClick">
+            <summary>
+            Двойной клик по элементу.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.DoubleClick(Winium.Cruciatus.Core.MouseButton)">
+            <summary>
+            Двойной клик по элементу.
+            </summary>
+            <param name="button">
+            Используемая кнопка мыши.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.DoubleClick(Winium.Cruciatus.Core.MouseButton,Winium.Cruciatus.Core.ClickStrategies)">
+            <summary>
+            Двойной клик по элементу.
+            </summary>
+            <param name="button">
+            Используемая кнопка мыши.
+            </param>
+            <param name="strategy">
+            Стратегия клика.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.FindElement(Winium.Cruciatus.Core.By)">
+            <summary>
+            Поиск элемента.
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="strategy">
+            Стратегия поиска.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.FindElementByName(System.String)">
+            <summary>
+            Поиск элемента по Name.
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="value">
+            Имя элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.FindElementByUid(System.String)">
+            <summary>
+            Поиск элемента по AutomationId.
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="value">
+            Уникальный идентификатор элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.FindElements(Winium.Cruciatus.Core.By)">
+            <summary>
+            Поиск элементов.
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="strategy">
+            Стратегия поиска.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.SetFocus">
+            <summary>
+            Устанавливает фокус на элементе.
+            Если элемент - окно и оно было свёрнуто, то разворачивает его.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.SetText(System.String)">
+            <summary>
+            Установка текста.
+            </summary>
+            <param name="text">
+            Целевой текст.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Text">
+            <summary>
+            Возвращает текст элемента.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.Text(Winium.Cruciatus.Core.GetTextStrategies)">
+            <summary>
+            Возвращает текст элемента.
+            </summary>
+            <param name="strategy">
+            Стратегия получения элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CruciatusElement.ToString">
+            <summary>
+            Возвращает строковое представление элемента.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.CruciatusElement.FindStrategy">
+            <summary>
+            Стратегия поиска элемента.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.CruciatusElement.Properties">
+            <summary>
+            Свойства элемента.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.Menu.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр меню.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.Menu.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр меню. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.Menu.GetItem(System.String)">
+            <summary>
+            Возвращает элемент меню, указанный последним в пути.
+            </summary>
+            <param name="headersPath">
+            Путь из заголовков для прохода (пример: control$view$zoom).
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.Menu.SelectItem(System.String)">
+            <summary>
+            Выбирает элемент меню, указанный последним в пути.
+            </summary>
+            <param name="headersPath">
+            Путь из заголовков для прохода (пример: control$view$zoom).
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.SaveFileDialog">
+            <summary>
+            Класс для работы с диалоговым окном Microsoft.Win32.SaveFileDialog.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.SaveFileDialog.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр диалогового окна.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.SaveFileDialog.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр диалогового окна. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.SaveFileDialog.CancelButton">
+            <summary>
+            Возвращает кнопку Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.SaveFileDialog.FileNameComboBox">
+            <summary>
+            Возвращает выпадающий список с именем открываемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.SaveFileDialog.FileTypeComboBox">
+            <summary>
+            Возвращает выпадающий список с типом открываемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.SaveFileDialog.SaveButton">
+            <summary>
+            Возвращает кнопку Сохранить.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.OpenFileDialog">
+            <summary>
+            Класс для работы с диалоговым окном Microsoft.Win32.OpenFileDialog.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.OpenFileDialog.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Конструктор класса по объекту диалогового окна.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.OpenFileDialog.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Конструторк класса.  Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стретегия поиска.
+            </param>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.OpenFileDialog.CancelButton">
+            <summary>
+            Возвращает кнопку Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.OpenFileDialog.FileNameComboBox">
+            <summary>
+            Возвращает выпадающий список с именем открываемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.OpenFileDialog.OpenButton">
+            <summary>
+            Возвращает кнопку Открыть.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Extensions.IScreenshoterExtension">
+            <summary>
+            Набор расширений для объектов, реализующих интерфейс IScreenshoter.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.IScreenshoterExtension.AutomaticScreenshotCaptureIfNeeded(Winium.Cruciatus.Core.IScreenshoter)">
+            <summary>
+            Снимает и сохраняет скриншот в случае когда флаг 
+            CruciatusFactory.Settings.AutomaticScreenshotCapture равен true.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.IScreenshoterExtension.TakeScreenshot(Winium.Cruciatus.Core.IScreenshoter)">
+            <summary>
+            Снимает и сохраняет скриншот.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.KeyboardSimulatorType">
+            <summary>
+            Перечисление поддерживаемых симуляторов клавиатуры.
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Settings.KeyboardSimulatorType.BasedOnWindowsFormsSendKeysClass">
+            <summary>
+            Список поддерживаемых ключей клавиш и конструкций https://msdn.microsoft.com/ru-ru/library/system.windows.forms.sendkeys(v=vs.110).aspx
+            </summary>
+        </member>
+        <member name="F:Winium.Cruciatus.Settings.KeyboardSimulatorType.BasedOnInputSimulatorLib">
+            <summary>
+            Для получения допольнительных методов необходимо привести к KeyboardSimulatorExt. 
+            Подробности о библиотеке http://inputsimulator.codeplex.com/
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.CruciatusSettings">
+            <summary>
+            Класс настроек Cruciatus.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Settings.CruciatusSettings.ResetToDefault">
+            <summary>
+            Сбрасывает значения настроек на исходные.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.AutomaticScreenshotCapture">
+            <summary>
+            Флаг автоматического снятия скриншотов. По умолчанию false.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.ClickButton">
+            <summary>
+            Кнопка для клика по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.KeyboardSimulatorType">
+            <summary>
+            Информация о типе симулятора клавиатуры.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.MessageBoxButtonUid">
+            <summary>
+            Информация о уникальных идентификаторах кнопок в диалоговом окне MessageBox.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.OpenFileDialogUid">
+            <summary>
+            Информация о уникальных идентификаторах элементов в OpenFileDialog.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.SaveFileDialogUid">
+            <summary>
+            Информация о уникальных идентификаторах элементов в SaveFileDialog.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.ScreenshotsPath">
+            <summary>
+            Директорию для сохранения скриншотов. По умолчанию './Screenshots'.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.ScrollBarHeight">
+            <summary>
+            Высота полосы прокрутки.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.ScrollBarWidth">
+            <summary>
+            Ширина полосы прокрутки.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.SearchTimeout">
+            <summary>
+            Время поиска элемента (миллисекунды).
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.CruciatusSettings.WaitForExitTimeout">
+            <summary>
+            Время ожидания завершения приложения (миллисекунды).
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.CheckBox">
+            <summary>
+            Представляет элемент управления чекбокс.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CheckBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр чекбокса.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CheckBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр чекбокса. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CheckBox.Check">
+            <summary>
+            Устанавливает чекбокс в состояние чекнут.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.CheckBox.Uncheck">
+            <summary>
+            Устанавливает чекбокс в состояние не чекнут.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.CheckBox.IsToggleOn">
+            <summary>
+            Возвращает значение, указывающее, чекнут ли чекбокс.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.ComboBox">
+            <summary>
+            Представляет элемент управления выпадающий список.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр выпадающего списка.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр выпадающего списка. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.Collapse">
+            <summary>
+            Сворачивает выпадающий список кликом.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.Collapse(Winium.Cruciatus.Core.ExpandStrategy)">
+            <summary>
+            Сворачивает выпадающий список.
+            </summary>
+            <param name="strategy">
+            Стратегия способа раскрытия.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.Expand">
+            <summary>
+            Раскрывает выпадающий список кликом.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.Expand(Winium.Cruciatus.Core.ExpandStrategy)">
+            <summary>
+            Раскрывает выпадающий список.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.ScrollTo(Winium.Cruciatus.Core.By)">
+            <summary>
+            Прокручивает список до элемента, удовлетворяющего стратегии поиска. 
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="getStrategy">
+            Стратегия поиска целевого элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ComboBox.SelectedItem">
+            <summary>
+            Возвращает выбранный элемент.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.ComboBox.IsExpanded">
+            <summary>
+            Возвращает значение, указывающее, раскрыт ли выпадающий список.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.ComboBox.ExpandCollapseState">
+            <summary>
+            Возвращает состояние раскрытости выпадающего списка.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.DataGrid">
+            <summary>
+            Представляет элемент управления таблица.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.DataGrid.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр таблицы. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.DataGrid.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр таблицы.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.DataGrid.Item(System.Int32,System.Int32)">
+            <summary>
+            Возвращает элемент ячейки, либо null, если он не найден.
+            </summary>
+            <param name="row">
+            Номер строки.
+            </param>
+            <param name="column">
+            Номер колонки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.DataGrid.ScrollTo(System.Int32,System.Int32)">
+            <summary>
+            Прокручивает таблицу до ячейки.
+            </summary>
+            <param name="row">
+            Номер строки.
+            </param>
+            <param name="column">
+            Номер колонки.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.DataGrid.SelectCell(System.Int32,System.Int32)">
+            <summary>
+            Выбирает ячейку.
+            </summary>
+            <param name="row">
+            Номер строки.
+            </param>
+            <param name="column">
+            Номер колонки.
+            </param>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.DataGrid.ColumnCount">
+            <summary>
+            Возвращает количество столбцов в таблице.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.DataGrid.RowCount">
+            <summary>
+            Возвращает количество строк в таблице.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.ListBox">
+            <summary>
+            Элемент список.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ListBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Создает экземпляр списка.
+            </summary>
+            <param name="element">
+            Исходный элемент.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ListBox.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр списка. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.ListBox.ScrollTo(Winium.Cruciatus.Core.By)">
+            <summary>
+            Прокручивает список до элемента, удовлетворяющего стратегии поиска. 
+            Возвращает целевой элемент, либо null, если он не найден.
+            </summary>
+            <param name="getStrategy">
+            Стратегия поиска целевого элемента.
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Elements.TabItem">
+            <summary>
+            Элемент вкладка. Требуется поддержка интерфейса SelectionItemPattern.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.TabItem.#ctor(Winium.Cruciatus.Elements.CruciatusElement,Winium.Cruciatus.Core.By)">
+            <summary>
+            Создает экземпляр вкладки. Поиск осуществится только при необходимости.
+            </summary>
+            <param name="parent">
+            Родительский элемент.
+            </param>
+            <param name="getStrategy">
+            Стратегия поиска элемента.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Elements.TabItem.Select">
+            <summary>
+            Выбирает вкладку текущей.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Elements.TabItem.IsSelection">
+            <summary>
+            Возвращает значение, указывающее, выбрана ли вкладка.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Exceptions.CruciatusException">
+            <summary>
+            Исключение фреймворка Cruciatus.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Exceptions.CruciatusException.#ctor">
+            <summary>
+            Конструктор по умолчанию.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Exceptions.CruciatusException.#ctor(System.String)">
+            <summary>
+            Параметризованный конструктор.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Exceptions.CruciatusException.#ctor(System.String,System.Exception)">
+            <summary>
+            Параметризованный конструктор.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Exceptions.CruciatusException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Параметризованный конструктор.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Extensions.AutomationElementExtension">
+            <summary>
+            Набор расширений для объектов AutomationElement.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Extensions.CruciatusElementExtension">
+            <summary>
+            Набор расширений для объектов CruciatusElement.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ClickWithPressedCtrl(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Кликнуть по элементу с зажатой кнопкой Control
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ClickWithPressedKeys(Winium.Cruciatus.Elements.CruciatusElement,System.Collections.Generic.List{WindowsInput.Native.VirtualKeyCode})">
+            <summary>
+            Клик по элементу с нажатыми кнопками (Ctrl, Shift, etc)
+            </summary>
+            <param name="element">
+            Экземпляр элемента.
+            </param>
+            <param name="keys">
+            Клавиши для "зажатия"
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.GetAutomationPropertyValue``1(Winium.Cruciatus.Elements.CruciatusElement,System.Windows.Automation.AutomationProperty)">
+            <summary>
+            Получает у элемента значение заданного свойства.
+            </summary>
+            <param name="cruciatusElement">
+            Экземпляр элемента.
+            </param>
+            <param name="property">
+            Целевое свойство.
+            </param>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.GetPattern``1(Winium.Cruciatus.Elements.CruciatusElement,System.Windows.Automation.AutomationPattern)">
+            <summary>
+            Возвращает требуемый шаблон автоматизации.
+            </summary>
+            <param name="element">
+            Экземпляр элемента.
+            </param>
+            <param name="pattern">
+            Требуемый шаблон (например ExpandCollapsePattern.Pattern).
+            </param>
+            <typeparam name="T">
+            Тип требуемого шаблона.
+            </typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ToCheckBox(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Преобразовать элемент в CheckBox.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ToComboBox(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Преобразовать элемент в ComboBox.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ToDataGrid(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Преобразовать элемент в DataGrid.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ToListBox(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Преобразовать элемент в ListBox.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.Extensions.CruciatusElementExtension.ToMenu(Winium.Cruciatus.Elements.CruciatusElement)">
+            <summary>
+            Преобразовать элемент в Menu.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.MessageBox">
+            <summary>
+            Класс для работы с диалоговым окном MessageBox.
+            </summary>
+        </member>
+        <member name="M:Winium.Cruciatus.MessageBox.ClickButton(Winium.Cruciatus.Elements.CruciatusElement,System.Windows.MessageBoxButton,System.Windows.MessageBoxResult)">
+            <summary>
+            Кликает по заданной кнопке диалогового окна.
+            </summary>
+            <param name="dialogWindow">
+            Диалоговое окно.
+            </param>
+            <param name="buttonsType">
+            Тип набора кнопок диалогово окна.
+            </param>
+            <param name="targetButton">
+            Целевая кнопка.
+            </param>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid">
+            <summary>
+            Класс описывающий уникальные идентификаторы кнопок диалогового окна MessageBox.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid.CloseButton">
+            <summary>
+            Уникальный идентификатор кнопки Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid.OkCancelType">
+            <summary>
+            Тип набор из 2 кнопок - Ок и Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid.OkType">
+            <summary>
+            Тип набор из 1 кнопки - Ок.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid.YesNoCancelType">
+            <summary>
+            Тип набор из 2 кнопок - Да, Нет и Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.MessageBoxButtonUid.YesNoType">
+            <summary>
+            Тип набор из 2 кнопок - Да и Нет.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.MessageBoxSettings.OkCancelType">
+            <summary>
+            Класс описывающий набор из 2 кнопок - Ок и Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.OkCancelType.Cancel">
+            <summary>
+            Уникальный идентификатор кнопки Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.OkCancelType.Ok">
+            <summary>
+            Уникальный идентификатор кнопки Ок.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.MessageBoxSettings.OkType">
+            <summary>
+            Класс описывающий набор из 1 кнопки - Ок.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.OkType.Ok">
+            <summary>
+            Уникальный идентификатор кнопки Ок.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoCancelType">
+            <summary>
+            Класс описывающий набор из 3 кнопок - Да, Нет и Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoCancelType.Cancel">
+            <summary>
+            Уникальный идентификатор кнопки Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoCancelType.No">
+            <summary>
+            Уникальный идентификатор кнопки Нет.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoCancelType.Yes">
+            <summary>
+            Уникальный идентификатор кнопки Да.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoType">
+            <summary>
+            Класс описывающий набор из 2 кнопок - Да и Нет.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoType.No">
+            <summary>
+            Уникальный идентификатор кнопки Нет.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.MessageBoxSettings.YesNoType.Yes">
+            <summary>
+            Уникальный идентификатор кнопки Да.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.SaveFileDialogUid">
+            <summary>
+            Класс, описывающий уникальные идентификаторы элементов диалога SaveFileDialog.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.SaveFileDialogUid.CancelButton">
+            <summary>
+            Кнопка Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.SaveFileDialogUid.FileNameEditableComboBox">
+            <summary>
+            Редактируемый выпадающий список с именем сохраняемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.SaveFileDialogUid.FileTypeComboBox">
+            <summary>
+            Выпадающий список с типом сохраняемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.SaveFileDialogUid.SaveButton">
+            <summary>
+            Кнопка Сохранить.
+            </summary>
+        </member>
+        <member name="T:Winium.Cruciatus.Settings.OpenFileDialogUid">
+            <summary>
+            Класс, описывающий уникальные идентификаторы элементов диалога OpenFileDialog.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.OpenFileDialogUid.CancelButton">
+            <summary>
+            Кнопка Отмена.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.OpenFileDialogUid.FileNameEditableComboBox">
+            <summary>
+            Редактируемый выпадающий список с именем открываемого файла.
+            </summary>
+        </member>
+        <member name="P:Winium.Cruciatus.Settings.OpenFileDialogUid.OpenButton">
+            <summary>
+            Кнопка Открыть.
+            </summary>
+        </member>
+    </members>
+</doc>
