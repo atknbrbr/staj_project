@@ -25,8 +25,7 @@ namespace ConsoleApp10.Pages
         {
             BtHazirlık.Click();
             TakeScreenshot("Hazırlık ana ekran", 0);
-            //TakeScreenshot.CaptureApp("Hazırlık");
-            //Thread.Sleep(500);
+            Thread.Sleep(500);
         }
 
         public void GorevHazirlikGuncelle(String text)
@@ -35,8 +34,7 @@ namespace ConsoleApp10.Pages
             TxtboxGorev.Click();
             TxtboxGorev.SendKeys(text);
             TakeScreenshot("Görev Hazırlık", 0);
-            //TakeScreenshot.CaptureApp("Hazırlık-GörevHazırlık");
-            //Thread.Sleep(500);
+            Thread.Sleep(500);
             //BtGorevSifirla.Click();
         }
 
@@ -46,7 +44,7 @@ namespace ConsoleApp10.Pages
             TxtboxKalkis.Click();
             TxtboxKalkis.SendKeys(test);
             TakeScreenshot("Uçuş Hazırlık", 0);
-            //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık");
+            Thread.Sleep(500);
             //BtKalkisSifirla.Click();
         }
 
@@ -55,9 +53,8 @@ namespace ConsoleApp10.Pages
             BtHazirlık.Click();
             BtKalkisSifirla.Click();
             TakeScreenshot("Uçuş Hazırlık-Sıfırla Pop Up", 0);
-            //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık-SıfırlaPopUp");
-            //Thread.Sleep(300);
-            //BtKalkisSifirlaHayir.Click();
+            Thread.Sleep(300);
+            BtKalkisSifirlaHayir.Click();
 
         }
     }

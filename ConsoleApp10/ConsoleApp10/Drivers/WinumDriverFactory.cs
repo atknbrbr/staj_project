@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
+using System.Management;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Automation;
@@ -30,11 +31,9 @@ namespace ConsoleApp10.Drivers
         //
         public static WiniumDriver GetWiniumDriver() {
 
-            if (driver == null) 
+            if (driver == null)
             {
                 DesktopOptions options = new DesktopOptions();
-                options.ApplicationPath = "C:\\Users\\PC_7583\\Desktop\\Debug\\net8.0-windows\\wpfuygulamasi.exe";
-
 
                 //
                 // Uygulamanın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
@@ -42,14 +41,42 @@ namespace ConsoleApp10.Drivers
                 Process[] appProcesses = Process.GetProcessesByName("wpfuygulamasi");
                 if (appProcesses.Length == 0)
                 {
+                    options.ApplicationPath = "C:\\Users\\PC_7583\\Desktop\\Debug\\net8.0-windows\\wpfuygulamasi.exe";
                     options.DebugConnectToRunningApp = false;
                 }
-
                 else
                 {
+                    if (appProcesses.Length > 1)
+                    {
+                        for (int i = appProcesses.Length - 1; i>0; i--)
+                        {
+                            appProcesses[i].Kill();
+                        }
+                    }
+
+                    var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine FROM Win32_Process";
+                    using (var searcher = new ManagementObjectSearcher(wmiQueryString))
+                    using (var results = searcher.Get())
+                    {
+                        var query = from p in Process.GetProcesses()
+                                    join mo in results.Cast<ManagementObject>()
+                                    on p.Id equals (int)(uint)mo["ProcessId"]
+                                    select new
+                                    {
+                                        Process = p,
+                                        Path = (string)mo["ExecutablePath"],
+                                    };
+                        foreach (var item in query)
+                        {
+                            if (item.Process.ProcessName == appProcesses[0].ProcessName)
+                            {
+                                options.ApplicationPath = item.Path;
+                                break;
+                            }
+                        }
+                    }
                     options.DebugConnectToRunningApp = true;
                 }
-
                 //
                 // Driverın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
                 //
@@ -65,8 +92,8 @@ namespace ConsoleApp10.Drivers
 
                     Process process = Process.Start(startInfo);
                 }
-
                 driver = new WiniumDriver(new Uri("http://localhost:9999"), options, TimeSpan.FromSeconds(360));
+                
             }
             return driver;
         }

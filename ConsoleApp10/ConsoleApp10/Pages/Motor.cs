@@ -173,7 +173,6 @@ namespace ConsoleApp10.Pages
                 fileName++;
             }
 
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
             ustLimit = a;
             altLimit = b;
             guncelDeger = c;
@@ -183,7 +182,6 @@ namespace ConsoleApp10.Pages
                 if (ustLimit < 0)
                 {
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
 
@@ -195,7 +193,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (ustLimit > 80)
@@ -205,7 +202,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -215,7 +211,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
             }
@@ -230,7 +225,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
                 }
@@ -242,7 +236,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -252,7 +245,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
                 }
@@ -267,7 +259,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
 
                 }
@@ -279,7 +270,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -289,7 +279,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
             }
@@ -303,7 +292,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (altLimit < 80)
@@ -314,7 +302,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -325,7 +312,6 @@ namespace ConsoleApp10.Pages
                         actions.Click().Perform();
                     }
                     TakeScreenshot(fileName.ToString(), 1, 0, 1);
-                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
                     fileName++;
                 }
             }
