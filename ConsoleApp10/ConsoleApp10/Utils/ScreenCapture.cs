@@ -14,12 +14,17 @@ using System.Threading;
 
 namespace ConsoleApp10.Utils
 {
+    //
+    // Ekran yakalama işlemini gerçekleştiren sınıf
+    //
     public class ScreenCapture
     {
         private const int SW_RESTORE = 9;
         private static String path;
 
-
+        //
+        // Dosya yolu düzenlenir, sonrasında "ALT+PRINT" tuş kombinasyonu uygulanır, yakalanan görüntü, önceden belirlenen dosya yoluna kaydedilir.
+        //
         public static Image CaptureApp(String fileName)
         {
             path = MainHeaders.rootPath;

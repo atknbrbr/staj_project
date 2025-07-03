@@ -42,7 +42,9 @@ namespace ConsoleApp10.Pages
         private IWebElement SliderMotor => winiumDriver.FindElementById("sliderMotor");
         private IWebElement BtMotorAyarlar=> winiumDriver.FindElementById("Motor_Ayarlar");
 
-
+        //
+        // Motor başlığına tıklama
+        //
         public void ClickMotorMenu()
         {
             BtMotor.Click();
@@ -50,6 +52,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Motor=>Göstergeler başlığına tıklama
+        //
         public void ClickMotorGostergeler()
         {
             BtMotor.Click();
@@ -58,6 +63,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Göstergelerdeki tabloyu açma
+        //
         public void ClickMotorGostergelerTablo()
         {
             BtMotor.Click();
@@ -67,6 +75,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Göstergelerdeki seçim kısmının testi
+        //
         public bool ClickMotorGostergelerSecim(String btnName)
         {
             BtMotor.Click();
@@ -90,6 +101,9 @@ namespace ConsoleApp10.Pages
             
         }
 
+        //
+        // Göstergelerdeki "Motor ayarları" kısmının test edilmesi
+        //
         public bool ClickMotorGostergelerMotorAyarlari()
         {
             BtMotor.Click();
@@ -119,12 +133,21 @@ namespace ConsoleApp10.Pages
             }
         }
 
+        //
+        // Diagnostik test edilmesi
+        //
         public void ClickMotorDiagnostikMenu()
         {
             BtMotor.Click();
             Thread.Sleep(500);
             BtDiagnostik.Click();
             var elements = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='TextBlock']")).ToList();
+
+            //
+            // Ekrandaki textBox'lar elde edilir. Elde edilen textbox'lar:
+            // "slider1Name - slider1UstLimit - slider1AltLimit - slider1GuncelDeger - slider2Name - ....."
+            // şeklinde bir liste oluşturur. bu yapı kullanılarak textbox'lar 4 lü ele alınır. ilgili güncellemeler slider'a CheckSliders fonksiyonu ile yapılır.
+            //
 
             foreach (var element in elements)
             {
@@ -164,7 +187,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(200);
         }
 
-
+        //
+        // Slider elementleri, ekrandaki değerler ve bilinen limit değerler doğrultusunda tüm olasılıklar kontrol edilerek güncellenir
+        //
         public void CheckSliders(IWebElement slider1, int a, int b, int c)
         {
             if (fileName == 1)
@@ -317,6 +342,9 @@ namespace ConsoleApp10.Pages
             }
         }
 
+        //
+        // Motor ayarları butonuna tıklama
+        //
         public void ClickMotorAyarlarMenu()
         {
             BtMotor.Click();

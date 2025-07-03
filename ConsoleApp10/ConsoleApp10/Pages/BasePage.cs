@@ -11,6 +11,9 @@ using static ConsoleApp10.Drivers.WinumDriverFactory;
 
 namespace ConsoleApp10.Pages
 {
+    //
+    // Tüm sayfaların miras aldığı Base sınıf. Bu sınıfta driverlar ve driver bilgisi olmadan ekran görüntüsü alınabilmesi için TakeScreenshot sınıfı bulunmaktadır
+    //
     public class BasePage
     {
         protected WiniumDriver winiumDriver;
@@ -20,7 +23,7 @@ namespace ConsoleApp10.Pages
         public BasePage() 
         {
             winiumDriver = GetWiniumDriver();
-            actions = new Actions(winiumDriver);
+            actions = GetActions();
             cruciatusElement = GetCruciatusElement();
             SetAppWindow();
         }

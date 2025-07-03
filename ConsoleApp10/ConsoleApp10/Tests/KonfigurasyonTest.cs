@@ -31,14 +31,6 @@ namespace ConsoleApp10.Tests
         }
 
         [Test]
-        public void ClickKameraHepsiYokTest()
-        {
-            konfigurasyon.ClickKameraHepsiYok();
-            MainHeaders.CreateSubFolders("Kamera Test(Tum konfigurasyonlar kapalı)", cruciatusElement, 4);
-            Thread.Sleep(500);
-        }
-
-        [Test]
         public void KonfigurasyonGonderListviewVarTest()
         {
             konfigurasyon.KonfigurasyonGonderListviewVar();
@@ -67,15 +59,6 @@ namespace ConsoleApp10.Tests
         {
             konfigurasyon.KonfigurasyonDurumBilgilendirme();
             //TakeScreenshot.CaptureApp("Konfigurasyon");
-            Thread.Sleep(500);
-        }
-
-        [Test]
-        public void ClickKameraListViewAcikTest()
-        {
-            konfigurasyon.ClickKameraListViewAcik();
-            MainHeaders.CreateSubFolders("ListView Açıkken Kamera Bağlantı", cruciatusElement, 4);
-            //TakeScreenshot.CaptureApp("Konfigurasyon-ListView Açıkken Kamera Bağlantı");
             Thread.Sleep(500);
         }
 

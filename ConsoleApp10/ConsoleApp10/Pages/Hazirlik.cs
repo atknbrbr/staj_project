@@ -21,6 +21,9 @@ namespace ConsoleApp10.Pages
         private IWebElement BtKalkisSifirla => winiumDriver.FindElementById("sifirla_buton");
         private IWebElement BtKalkisSifirlaHayir => winiumDriver.FindElementById("hayır");
 
+        //
+        // Hazırlık başlığına tıklama
+        //
         public void ClickHazirlikMenu()
         {
             BtHazirlık.Click();
@@ -28,6 +31,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Hazırlık=>Görev hazırlık kısmının güncellenmesi
+        //
         public void GorevHazirlikGuncelle(String text)
         {
             BtHazirlık.Click();
@@ -38,6 +44,9 @@ namespace ConsoleApp10.Pages
             //BtGorevSifirla.Click();
         }
 
+        //
+        // Hazırlık=>Uçuş hazırlık kısmının güncellenmesi
+        //
         public void UcusHazirlikGuncelle(String test)
         {
             BtHazirlık.Click();
@@ -48,6 +57,9 @@ namespace ConsoleApp10.Pages
             //BtKalkisSifirla.Click();
         }
 
+        //
+        // Hazırlık=>Uçuş hazırlık kısmında Hayır seçildikten sonra Pop Up'ın yakalanması
+        //
         public void UcusHazirlikSıfırlaPopUp()
         {
             BtHazirlık.Click();

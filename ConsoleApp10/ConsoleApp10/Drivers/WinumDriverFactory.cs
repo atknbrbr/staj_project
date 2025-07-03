@@ -19,6 +19,9 @@ using Winium.Cruciatus.Extensions;
 
 namespace ConsoleApp10.Drivers
 {
+    //
+    // BasePage'in constructor'ında nesneleri çağırdığı sınıf.
+    //
     public class WinumDriverFactory
     {
         private static WiniumDriver driver;
@@ -39,6 +42,8 @@ namespace ConsoleApp10.Drivers
                 // Uygulamanın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
                 //
                 Process[] appProcesses = Process.GetProcessesByName("wpfuygulamasi");
+                
+                // Arkada çalışan uygulama yoksa, uygulama dizini önceden verilmelidir.
                 if (appProcesses.Length == 0)
                 {
                     options.ApplicationPath = "C:\\Users\\PC_7583\\Desktop\\Debug\\net8.0-windows\\wpfuygulamasi.exe";
@@ -46,6 +51,7 @@ namespace ConsoleApp10.Drivers
                 }
                 else
                 {
+                    // Arkada çalışan birden fazla uygulama varsa, fazladan çalışan uygulamalar kapatılır, sadece 1 uygulama çalışır duruma gelir.
                     if (appProcesses.Length > 1)
                     {
                         for (int i = appProcesses.Length - 1; i>0; i--)
@@ -54,6 +60,7 @@ namespace ConsoleApp10.Drivers
                         }
                     }
 
+                    // Burada çalışan uygulama dair dizin bulma işlemi gerçekleşir
                     var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine FROM Win32_Process";
                     using (var searcher = new ManagementObjectSearcher(wmiQueryString))
                     using (var results = searcher.Get())
@@ -70,7 +77,7 @@ namespace ConsoleApp10.Drivers
                         {
                             if (item.Process.ProcessName == appProcesses[0].ProcessName)
                             {
-                                options.ApplicationPath = item.Path;
+                                options.ApplicationPath = item.Path;                       
                                 break;
                             }
                         }
@@ -125,6 +132,9 @@ namespace ConsoleApp10.Drivers
             return actions;
         }
 
+        //
+        // Uygulama penceresi düzenlenme işlemleri
+        //
         public static void SetAppWindow()
         {
             if (!windowCheck)

@@ -24,7 +24,9 @@ namespace ConsoleApp10.Pages
         private IWebElement BtYakitGonder => winiumDriver.FindElementById("btnGonder");
         private IWebElement ElemComboMotor2 => winiumDriver.FindElementById("combobox_230");
 
-
+        //
+        // Yakıt başlığına tıklama
+        //
         public void ClickYakitMenu()
         {
             BtYakit.Click();
@@ -32,6 +34,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Yakıt radio button güncellemesi
+        //
         public void ClickYakitRadioButtons()
         {
             BtYakit.Click();
@@ -44,6 +49,9 @@ namespace ConsoleApp10.Pages
             TakeScreenshot("Radio Buton", 2);
         }
 
+        //
+        // Yakıt kısmında emniyeti açıp yakıt yükleme işlemi
+        //
         public void ClickYakitYukle(String yakit)
         {
             BtYakit.Click();

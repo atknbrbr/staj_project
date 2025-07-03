@@ -31,13 +31,14 @@ namespace ConsoleApp10
         static void Main(string[] args)
         {
             //
-            // Her bir sekme için objeler oluşturulur.
+            // Her bir sekme için obje oluşturulur.
             //
             Hazirlik hazirlik = new Hazirlik();
             Motor motor = new Motor();
             Yakit yakit = new Yakit();
             Guc guc = new Guc();
             Konfigurasyon konfigurasyon = new Konfigurasyon();
+            Kamera kamera = new Kamera();
 
             //
             // HAZIRLIK İŞLEMLERİ
@@ -47,8 +48,8 @@ namespace ConsoleApp10
             hazirlik.UcusHazirlikGuncelle("123");
             hazirlik.UcusHazirlikSıfırlaPopUp();
 
+            // Her bir ana başlık sonrasında, alt başlıkların tekrar okunması için önceden tutulan alt başlıklar temizlenir
             MainHeaders.ResetSubHeaders();
-
 
             //
             // MOTOR İŞLEMLERİ
@@ -61,6 +62,7 @@ namespace ConsoleApp10
             motor.ClickMotorDiagnostikMenu();
             motor.ClickMotorAyarlarMenu();
 
+            // Her bir ana başlık sonrasında, alt başlıkların tekrar okunması için önceden tutulan alt başlıklar temizlenir
             MainHeaders.ResetSubHeaders();
 
             //
@@ -70,6 +72,7 @@ namespace ConsoleApp10
             yakit.ClickYakitRadioButtons();
             yakit.ClickYakitYukle("50");
 
+            // Her bir ana başlık sonrasında, alt başlıkların tekrar okunması için önceden tutulan alt başlıklar temizlenir
             MainHeaders.ResetSubHeaders();
 
 
@@ -81,20 +84,23 @@ namespace ConsoleApp10
             guc.ClickGucAyarlarMenu();
             guc.GucAyarlarMenu();
 
+            // Her bir ana başlık sonrasında, alt başlıkların tekrar okunması için önceden tutulan alt başlıklar temizlenir
             MainHeaders.ResetSubHeaders();
 
+
+            kamera.ClickKameraHepsiYok();                       //Konfigurasyon işlemleri öncesi kamera testi
             //
-            // GÜÇ İŞLEMLERİ
+            // KONFİGÜRASYON İŞLEMLERİ
             //
             konfigurasyon.ClickKonfigurasyonMenu();
-            konfigurasyon.ClickKameraHepsiYok();
             konfigurasyon.KonfigurasyonGonderHepsiYok();
-            konfigurasyon.ClickKameraListViewAcik();
             konfigurasyon.KonfigurasyonGonderListviewVar();
             konfigurasyon.KonfigurasyonListviewGoruntu();
             konfigurasyon.KonfigurasyonGonderPopUpVar();
             konfigurasyon.KonfigurasyonDurumBilgilendirme();
             konfigurasyon.KonfigurasyonGonderSekmeVar();
+
+            kamera.ClickKameraListViewAcik();                   //Konfigurasyon işlemleri sonrası kamera testi
         }
     }
 }

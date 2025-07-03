@@ -24,13 +24,15 @@ namespace ConsoleApp10.Pages
         private CruciatusElement comboSekme;
 
         private IWebElement BtKonfigurasyon => winiumDriver.FindElementById("Konfigurasyon");
-        private IWebElement BtKameraKontrol => winiumDriver.FindElementById("KameraTabControl");
-        private IWebElement BtKamera => winiumDriver.FindElementById("Kamera");
         private IWebElement BtInfoYesil => winiumDriver.FindElementById("InfoYesil");
         private IWebElement BtInfoSari => winiumDriver.FindElementById("InfoSari");
         private IWebElement BtInfoKirmizi => winiumDriver.FindElementById("InfoKirmizi");
         private IWebElement BtKonfigurasyonGonder => winiumDriver.FindElementById("GonderButton3");
 
+        //
+        // Konfigürasyon kısmında yer alan ComboBox'lar belirli bir hiyerarşide olduğu için, konfigürasyon başlığına basıldığında bu metod çalışarak
+        // ekranda yer alan ComboBox'lar tespit edilip diğer test metodlarında kullanılmak üzere kaydediliyor
+        //
         public void ReadComboBoxes()
         {
             comboBoxes = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']"))
@@ -42,6 +44,9 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(500);
         }
 
+        //
+        // Konfigürasyon başlığına tıklama
+        //
         public void ClickKonfigurasyonMenu()
         {
             BtKonfigurasyon.Click();
@@ -49,6 +54,9 @@ namespace ConsoleApp10.Pages
             ReadComboBoxes();
         }
 
+        //
+        // Tüm seçenekler "Yok"'tayken Konfigürasyon gönderme
+        //
         public void KonfigurasyonGonderHepsiYok()
         {
             BtKonfigurasyon.Click();
@@ -56,14 +64,9 @@ namespace ConsoleApp10.Pages
             TakeScreenshot("Konfigurasyon gönder(Tüm seçenekler yok)", 4);
         }
 
-        public void ClickKameraHepsiYok()
-        {
-            BtKonfigurasyon.Click();
-            BtKamera.Click();
-            BtKameraKontrol.Click();
-            TakeScreenshot("Kamera Test(Tum konfigurasyonlar kapalı)", 4);
-        }
-
+        //
+        // ListView var Konfigürasyonunu gönderme
+        //
         public void KonfigurasyonGonderListviewVar()
         {
             BtKonfigurasyon.Click();
@@ -76,6 +79,9 @@ namespace ConsoleApp10.Pages
             TakeScreenshot("ListView Konfigurasyon", 4);
         }
 
+        //
+        // ListView var Konfigürasyonunu gönderme sonrasında ekrana gelen ListView nesnesinin incelenmesi
+        //
         public void KonfigurasyonListviewGoruntu()
         {
             int pageDownName = 1;
@@ -111,6 +117,10 @@ namespace ConsoleApp10.Pages
 
         }
 
+
+        //
+        // Pop up Konfigürasyonunu gönderme
+        //
         public void KonfigurasyonGonderPopUpVar()
         {
             BtKonfigurasyon.Click();
@@ -123,6 +133,9 @@ namespace ConsoleApp10.Pages
             TakeScreenshot("Pop Up Konfigurasyon", 4);
         }
 
+        //
+        // Sekme Gönder Konfigürasyonunu gönderme
+        //
         public void KonfigurasyonGonderSekmeVar()
         {
             BtKonfigurasyon.Click();
@@ -134,6 +147,9 @@ namespace ConsoleApp10.Pages
             TakeScreenshot("Sekme Gonder Konfigurasyon", 4);
         }
 
+        //
+        // Pop up Konfigürasyonunu gönderme sonrasında ekrana gelen "Durum Bilgilendirme" kısmını kontrol etme
+        //
         public void KonfigurasyonDurumBilgilendirme()
         {
             BtKonfigurasyon.Click();
@@ -154,18 +170,6 @@ namespace ConsoleApp10.Pages
             BtInfoKirmizi.Click();
             TakeScreenshot("Pop Up-" + imageName.ToString(), 4);
             imageName++;
-        }
-
-
-        public void ClickKameraListViewAcik()
-        {
-            BtKonfigurasyon.Click();
-
-            KonfigurasyonGonderListviewVar();
-            KonfigurasyonGonderSekmeVar();
-            BtKamera.Click();
-            BtKameraKontrol.Click();
-            TakeScreenshot("ListView Açıkken Kamera Bağlantı", 4);
         }
     }
 }

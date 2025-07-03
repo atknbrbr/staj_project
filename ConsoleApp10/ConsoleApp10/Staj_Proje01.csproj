@@ -157,6 +157,7 @@
     <Compile Include="Drivers\WinumDriverFactory.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\Guc.cs" />
+    <Compile Include="Pages\Kamera.cs" />
     <Compile Include="Pages\Konfigurasyon.cs" />
     <Compile Include="Pages\Yakit.cs" />
     <Compile Include="Pages\Hazirlik.cs" />
@@ -166,16 +167,15 @@
     <Compile Include="Tests\BaseTest.cs" />
     <Compile Include="Tests\GucTest.cs" />
     <Compile Include="Tests\HazirlikTest.cs" />
+    <Compile Include="Tests\KameraTest.cs" />
     <Compile Include="Tests\KonfigurasyonTest.cs" />
     <Compile Include="Tests\MotorTest.cs" />
     <Compile Include="Tests\YakitTest.cs" />
     <Compile Include="Utils\MainHeaders.cs" />
-    <Compile Include="Utils\Headers.cs" />
     <Compile Include="Utils\OldTakeScreenshot.cs" />
     <Compile Include="Utils\PInvoke.cs" />
     <Compile Include="Utils\SetForegroundWindowApp.cs" />
     <Compile Include="Utils\SetFullscreen.cs" />
-    <Compile Include="Utils\SliderCalculation.cs" />
     <Compile Include="Utils\ScreenCapture.cs" />
   </ItemGroup>
   <ItemGroup>
