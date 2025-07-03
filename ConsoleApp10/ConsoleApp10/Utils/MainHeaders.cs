@@ -16,6 +16,10 @@ namespace ConsoleApp10.Utils
         private static List<String> mainHeaders;
         private static List<String> subheader1;
         private static List<String> subheader2;
+
+        //
+        // Ana başlık için butonlardan isim bilgisi çekilir
+        //
         static MainHeaders()
         {
             subheader1 = new List<String>();
@@ -26,6 +30,9 @@ namespace ConsoleApp10.Utils
             Directory.CreateDirectory(rootPath);
         }
 
+        //
+        // Alt başlık(lar) için butonlardan isim bilgisi çekilir
+        //
         public static void GetMainHeaders(CruciatusElement cruciatusElement)
         {
             var headerButtons = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='Button']"))
@@ -38,12 +45,18 @@ namespace ConsoleApp10.Utils
             }
         }
 
+        //
+        // Başka bir başlığa geçildiğinde değişkenleri yeni başlığa hazır getirmek amacıyla temizlemek için kullanılır
+        //
         public static void ResetSubHeaders()
         {
             subheader1.Clear();
             subheader2.Clear();
         }
 
+        //
+        // Alt başlık(lar) için butonlardan isim bilgisi çekilir, işlenir ve ekran görüntü alma metodları çağırılır
+        //
         public static void CreateSubFolders(String description, CruciatusElement cruciatusElement, int mainHeader, int sub1 = -1, int sub2 = -1)
         {
             String fullPath = mainHeaders[mainHeader] + "-";
