@@ -91,7 +91,7 @@ namespace ConsoleApp10.Drivers
                 if (driverProcesses.Length == 0)
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = @"C:/Users/PC_7583/Desktop/Winium.Desktop.Driver.exe";
+                    startInfo.FileName = @"C:/Winium.Desktop.Driver/Winium.Desktop.Driver.exe";
                     startInfo.Arguments = "";
                     startInfo.UseShellExecute = false;
                     startInfo.CreateNoWindow = true;

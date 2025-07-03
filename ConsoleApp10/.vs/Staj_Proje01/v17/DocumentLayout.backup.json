@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\drivers\\winumdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\drivers\\winumdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\kamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\kamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Program.cs",
               "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Program.cs",
               "RelativeToolTip": "ConsoleApp10\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwF0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwEoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T06:23:46.821Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WinumDriverFactory.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
-              "RelativeToolTip": "ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAgwCwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T12:39:42.932Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Kamera.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Kamera.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\Kamera.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Kamera.cs",
-              "RelativeToolTip": "ConsoleApp10\\Pages\\Kamera.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T13:00:47.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BasePage.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\BasePage.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\BasePage.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\BasePage.cs",
-              "RelativeToolTip": "ConsoleApp10\\Pages\\BasePage.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T12:40:24.683Z"
             }
           ]
         },

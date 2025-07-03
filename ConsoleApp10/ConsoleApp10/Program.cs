@@ -1,28 +1,5 @@
 ﻿using ConsoleApp10.Pages;
 using ConsoleApp10.Utils;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Winium;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Management;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-//using Winium.Cruciatus.Extensions;
-using System.Windows.Automation;
-using System.Windows.Forms;
-using Winium.Cruciatus;
-using Winium.Cruciatus.Elements;
-using Winium.Cruciatus.Core;
-
-//using Winium.Cruciatus.Core;
-using Winium.Cruciatus.Extensions;
-using System.Runtime.InteropServices;
 
 namespace ConsoleApp10
 {
