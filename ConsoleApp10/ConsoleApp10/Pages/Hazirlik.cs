@@ -24,6 +24,7 @@ namespace ConsoleApp10.Pages
         public void ClickHazirlikMenu()
         {
             BtHazirlık.Click();
+            TakeScreenshot("Hazırlık ana ekran", 0);
             //TakeScreenshot.CaptureApp("Hazırlık");
             //Thread.Sleep(500);
         }
@@ -33,6 +34,7 @@ namespace ConsoleApp10.Pages
             BtHazirlık.Click();
             TxtboxGorev.Click();
             TxtboxGorev.SendKeys(text);
+            TakeScreenshot("Görev Hazırlık", 0);
             //TakeScreenshot.CaptureApp("Hazırlık-GörevHazırlık");
             //Thread.Sleep(500);
             //BtGorevSifirla.Click();
@@ -43,8 +45,8 @@ namespace ConsoleApp10.Pages
             BtHazirlık.Click();
             TxtboxKalkis.Click();
             TxtboxKalkis.SendKeys(test);
+            TakeScreenshot("Uçuş Hazırlık", 0);
             //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık");
-            //Thread.Sleep(500);
             //BtKalkisSifirla.Click();
         }
 
@@ -52,8 +54,8 @@ namespace ConsoleApp10.Pages
         {
             BtHazirlık.Click();
             BtKalkisSifirla.Click();
+            TakeScreenshot("Uçuş Hazırlık-Sıfırla Pop Up", 0);
             //TakeScreenshot.CaptureApp("Hazırlık-UçuşHazırlık-SıfırlaPopUp");
-            Thread.Sleep(500);
             //Thread.Sleep(300);
             //BtKalkisSifirlaHayir.Click();
 

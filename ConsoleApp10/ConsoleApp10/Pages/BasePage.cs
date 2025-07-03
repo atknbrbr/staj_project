@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Interactions;
+﻿using ConsoleApp10.Utils;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Winium;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,13 @@ namespace ConsoleApp10.Pages
             winiumDriver = GetWiniumDriver();
             actions = new Actions(winiumDriver);
             cruciatusElement = GetCruciatusElement();
+            SetAppWindow();
         }
+
+        public void TakeScreenshot(String description, int mainHeader, int sub1 = -1, int sub2 = -1)
+        {
+            MainHeaders.CreateSubFolders(description, cruciatusElement, mainHeader, sub1, sub2);
+        }
+
     }
 }

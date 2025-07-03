@@ -13,9 +13,9 @@ namespace ConsoleApp10.Utils
     public class MainHeaders
     {
         public static String rootPath;
-        public static List<String> mainHeaders;
-        public static List<String> subheader1;
-        public static List<String> subheader2;
+        private static List<String> mainHeaders;
+        private static List<String> subheader1;
+        private static List<String> subheader2;
         static MainHeaders()
         {
             subheader1 = new List<String>();
@@ -38,13 +38,19 @@ namespace ConsoleApp10.Utils
             }
         }
 
+        public static void ResetSubHeaders()
+        {
+            subheader1.Clear();
+            subheader2.Clear();
+        }
+
         public static void CreateSubFolders(String description, CruciatusElement cruciatusElement, int mainHeader, int sub1 = -1, int sub2 = -1)
         {
             String fullPath = mainHeaders[mainHeader] + "-";
 
             if (sub1 < 0)
             {
-                TakeScreenshot.CaptureApp(fullPath + description);
+                ScreenCapture.CaptureApp(fullPath + description);
                 return;
             }
 
@@ -65,7 +71,7 @@ namespace ConsoleApp10.Utils
 
             if (sub2 < 0)
             {
-                TakeScreenshot.CaptureApp(fullPath + description);
+                ScreenCapture.CaptureApp(fullPath + description);
                 return;
             }
 
@@ -81,7 +87,7 @@ namespace ConsoleApp10.Utils
                 }
             }
             fullPath += subheader2[sub2] + "-";
-            TakeScreenshot.CaptureApp(fullPath + description);
+            ScreenCapture.CaptureApp(fullPath + description);
             return;
 
         }

@@ -28,7 +28,7 @@ namespace ConsoleApp10.Tests
         {
             hazirlik.ClickHazirlikMenu();
             //TakeScreenshot.CaptureApp("Hazırlık");
-            MainHeaders.CreateSubFolders("Hazırlık ana ekran", cruciatusElement, 0);
+            //MainHeaders.CreateSubFolders("Hazırlık ana ekran", cruciatusElement, 0);
             Thread.Sleep(500);
         }
 
@@ -36,7 +36,7 @@ namespace ConsoleApp10.Tests
         public void GorevHazirlikGuncelle()
         {
             hazirlik.GorevHazirlikGuncelle("123");
-            MainHeaders.CreateSubFolders("Görev Hazırlık", cruciatusElement, 0);
+            //MainHeaders.CreateSubFolders("Görev Hazırlık", cruciatusElement, 0);
             Thread.Sleep(500);
         }
 

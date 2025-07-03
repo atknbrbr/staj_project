@@ -30,12 +30,9 @@ namespace ConsoleApp10.Pages
         private IWebElement BtInfoSari => winiumDriver.FindElementById("InfoSari");
         private IWebElement BtInfoKirmizi => winiumDriver.FindElementById("InfoKirmizi");
         private IWebElement BtKonfigurasyonGonder => winiumDriver.FindElementById("GonderButton3");
-        
 
-
-        public Konfigurasyon()
+        public void ReadComboBoxes()
         {
-            BtKonfigurasyon.Click();
             comboBoxes = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']"))
                         .FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             comboListView = comboBoxes[0];
@@ -48,12 +45,15 @@ namespace ConsoleApp10.Pages
         public void ClickKonfigurasyonMenu()
         {
             BtKonfigurasyon.Click();
+            TakeScreenshot("Konfigurasyon", 4);
+            ReadComboBoxes();
         }
 
         public void KonfigurasyonGonderHepsiYok()
         {
             BtKonfigurasyon.Click();
             BtKonfigurasyonGonder.Click();
+            TakeScreenshot("Konfigurasyon gönder(Tüm seçenekler yok)", 4);
         }
 
         public void ClickKameraHepsiYok()
@@ -61,6 +61,7 @@ namespace ConsoleApp10.Pages
             BtKonfigurasyon.Click();
             BtKamera.Click();
             BtKameraKontrol.Click();
+            TakeScreenshot("Kamera Test(Tum konfigurasyonlar kapalı)", 4);
         }
 
         public void KonfigurasyonGonderListviewVar()
@@ -72,6 +73,7 @@ namespace ConsoleApp10.Pages
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
+            TakeScreenshot("ListView Konfigurasyon", 4);
         }
 
         public void KonfigurasyonListviewGoruntu()
@@ -86,7 +88,7 @@ namespace ConsoleApp10.Pages
             BtKonfigurasyonGonder.Click();
 
 
-            MainHeaders.CreateSubFolders("ListView-" + pageDownName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
             pageDownName++;
 
             IWebElement PageDown = winiumDriver.FindElementById("ListeScroll")
@@ -97,13 +99,13 @@ namespace ConsoleApp10.Pages
             actions = new Actions(winiumDriver)
                         .MoveToElement(PageDown, (x[2] / 2), x[3] - 2);
             actions.Click().Perform();
-            
-            MainHeaders.CreateSubFolders("ListView-" + pageDownName.ToString(), cruciatusElement, 4);
+
+            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
             pageDownName++;
 
             actions.Click().Perform();
 
-            MainHeaders.CreateSubFolders("ListView-" + pageDownName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
             pageDownName++;
 
 
@@ -118,6 +120,7 @@ namespace ConsoleApp10.Pages
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
+            TakeScreenshot("Pop Up Konfigurasyon", 4);
         }
 
         public void KonfigurasyonGonderSekmeVar()
@@ -128,6 +131,7 @@ namespace ConsoleApp10.Pages
             var secenekler = comboSekme.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click(); BtKonfigurasyonGonder.Click();
+            TakeScreenshot("Sekme Gonder Konfigurasyon", 4);
         }
 
         public void KonfigurasyonDurumBilgilendirme()
@@ -139,16 +143,16 @@ namespace ConsoleApp10.Pages
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
-            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("Pop Up-" + imageName.ToString(), 4);
             imageName++;
             BtInfoYesil.Click();
-            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("Pop Up-" + imageName.ToString(), 4);
             imageName++;
             BtInfoSari.Click();
-            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("Pop Up-" + imageName.ToString(), 4);
             imageName++;
             BtInfoKirmizi.Click();
-            MainHeaders.CreateSubFolders("Pop Up-" + imageName.ToString(), cruciatusElement, 4);
+            TakeScreenshot("Pop Up-" + imageName.ToString(), 4);
             imageName++;
         }
 
@@ -159,35 +163,9 @@ namespace ConsoleApp10.Pages
 
             KonfigurasyonGonderListviewVar();
             KonfigurasyonGonderSekmeVar();
-
-
             BtKamera.Click();
             BtKameraKontrol.Click();
+            TakeScreenshot("ListView Açıkken Kamera Bağlantı", 4);
         }
-
-
-
-        //var listOfCombos = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']"))
-        //                                .FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
-        //foreach (CruciatusElement x in listOfCombos)
-        //{
-        //    x.FindElementByUid("KonfigurasyonCombobox").Click();
-        //    Thread.Sleep(1000);
-        //    var secenekler = x.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
-        //    var cocuklar = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
-        //    cocuklar[0].Click();
-        //    Thread.Sleep(1000);
-        //    //secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ScrollViewer']"));
-        //    Thread.Sleep(1000);
-        //}
-
-
-
-        //var listOfCombos = cruciatusElement.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListView']")).FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']"));
-        //    foreach (CruciatusElement x in listOfCombos)
-        //    {
-        //        x.FindElementByUid("KonfigurasyonCombobox").Click();
-        //Thread.Sleep(1000);
-        //    }
     }
 }

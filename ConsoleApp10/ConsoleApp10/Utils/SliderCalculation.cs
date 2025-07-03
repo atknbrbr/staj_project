@@ -1,4 +1,5 @@
-﻿using ConsoleApp10.Tests;
+﻿using ConsoleApp10.Pages;
+using ConsoleApp10.Tests;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System;
@@ -10,7 +11,7 @@ using Winium.Cruciatus.Elements;
 
 namespace ConsoleApp10.Utils
 {
-    public static class SliderCalculation
+    public class SliderCalculation 
     {
         private static int ustLimit, altLimit, guncelDeger;
         private static int fileName = 1;

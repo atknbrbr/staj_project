@@ -34,67 +34,67 @@ namespace ConsoleApp10
             //
             // Driver ve uygulama ile ilgili tanımlamalar
             //
-            WiniumDriver winiumDriver;
-            DesktopOptions options = new DesktopOptions();
-            options.ApplicationPath = "C:/Users/PC_7583/Desktop/Debug/net8.0-windows/wpfuygulamasi.exe";
+            //WiniumDriver winiumDriver;
+            //DesktopOptions options = new DesktopOptions();
+            //options.ApplicationPath = "C:/Users/PC_7583/Desktop/Debug/net8.0-windows/wpfuygulamasi.exe";
             
             
-            //
-            // Uygulamanın sıfırdan çalışıp çalışmayacağına karar verilir.
-            //
-            Process[] appProcesses = Process.GetProcessesByName("wpfuygulamasi");
-            if (appProcesses.Length == 0)
-            {
-                options.DebugConnectToRunningApp = false;
-            }
+            ////
+            //// Uygulamanın sıfırdan çalışıp çalışmayacağına karar verilir.
+            ////
+            //Process[] appProcesses = Process.GetProcessesByName("wpfuygulamasi");
+            //if (appProcesses.Length == 0)
+            //{
+                
+            //    options.DebugConnectToRunningApp = false;
+            //}
 
-            else
-            {
-                options.DebugConnectToRunningApp = true;
-            }
+            //else
+            //{
+            //    options.DebugConnectToRunningApp = true;
+            //}
 
-            //
-            // Driverın sıfırdan çalışıp çalışmayacağına karar verilir.
-            //
-            Process[] driverProcesses = Process.GetProcessesByName("Winium.Desktop.Driver");
-            if (driverProcesses.Length == 0)
-            {
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = @"C:/Users/PC_7583/Desktop/Winium.Desktop.Driver.exe";
-                startInfo.Arguments = "";
-                startInfo.UseShellExecute = false;
-                startInfo.CreateNoWindow = true;
-                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            ////
+            //// Driverın sıfırdan çalışıp çalışmayacağına karar verilir.
+            ////
+            //Process[] driverProcesses = Process.GetProcessesByName("Winium.Desktop.Driver");
+            //if (driverProcesses.Length == 0)
+            //{
+            //    ProcessStartInfo startInfo = new ProcessStartInfo();
+            //    startInfo.FileName = @"C:/Users/PC_7583/Desktop/Winium.Desktop.Driver.exe";
+            //    startInfo.Arguments = "";
+            //    startInfo.UseShellExecute = false;
+            //    startInfo.CreateNoWindow = true;
+            //    startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
-                Process process = Process.Start(startInfo);
-            }
-
-            else
-            {
-            }
+            //    Process process = Process.Start(startInfo);
+            //}
             
-            winiumDriver = new WiniumDriver(new Uri("http://localhost:9999"), options, TimeSpan.FromSeconds(360));
+            //winiumDriver = new WiniumDriver(new Uri("http://localhost:9999"), options, TimeSpan.FromSeconds(360));
 
-            var winFinder = Winium.Cruciatus.Core.By.Name("Sekmeli Arayüz").AndType(ControlType.Window);
-            var cruciatusElement = Winium.Cruciatus.CruciatusFactory.Root.FindElement(winFinder);
+            ////
+            //// Çalışan uygulama işlemlerin yapılabilmesi için uygulama öne alınır
+            ////
+            //var winFinder = Winium.Cruciatus.Core.By.Name("Sekmeli Arayüz").AndType(ControlType.Window);
+            //var cruciatusElement = Winium.Cruciatus.CruciatusFactory.Root.FindElement(winFinder);
 
-            //
-            // Çalışan uygulama işlemlerin yapılabilmesi için öne alınır
-            //
-            Thread.Sleep(1000);
-            SetForegroundWindowApp.setWindow();
-            Thread.Sleep(750);
-            SetForegroundWindowApp.setWindow();
-
-
-            //
-            // Uygulama, tam ekran hale getirilir.
-            //
-            //SetFullscreen.Fullscreen();
+            ////
+            //// Çalışan uygulama işlemlerin yapılabilmesi için uygulama öne alınır
+            ////
+            //Thread.Sleep(1000);
+            //SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
+            //Thread.Sleep(750);
+            //SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
 
 
+            ////
+            //// Uygulama, tam ekran hale getirilir.
+            ////
+            ////SetFullscreen.Fullscreen("Sekmeli Arayüz");
 
-            MainHeaders.GetMainHeaders(cruciatusElement);
+
+
+            //MainHeaders.GetMainHeaders(cruciatusElement);
 
             //var headerButtons = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("//*[@ClassName='Button']"))
             //                                    .ToList()
@@ -111,11 +111,11 @@ namespace ConsoleApp10
             //
             // Her bir sekme için objeler oluşturulur.
             //
-            //Hazirlik hazirlik = new Hazirlik(winiumDriver);
-            //Motor motor = new Motor();
-            //Yakit yakit = new Yakit(winiumDriver);
-            //Guc guc = new Guc(winiumDriver);
-            //Konfigurasyon konfigurasyon = new Konfigurasyon(winiumDriver, cruciatusElement);
+            Hazirlik hazirlik = new Hazirlik();
+            Motor motor = new Motor();
+            Yakit yakit = new Yakit();
+            Guc guc = new Guc();
+            Konfigurasyon konfigurasyon = new Konfigurasyon();
 
 
             //Thread.Sleep(2000);
@@ -151,14 +151,12 @@ namespace ConsoleApp10
             //
             // HAZIRLIK İŞLEMLERİ
             //
-            //hazirlik.ClickHazirlikMenu();
-            //Thread.Sleep(350);
-            //hazirlik.GorevHazirlikGuncelle();
-            //Thread.Sleep(350);
-            //hazirlik.UcusHazirlikGuncelle();
-            //Thread.Sleep(350);
-            //hazirlik.UcusHazirlikSıfırlaPopUp();
-            //Thread.Sleep(350);
+            hazirlik.ClickHazirlikMenu();
+            hazirlik.GorevHazirlikGuncelle("123");
+            hazirlik.UcusHazirlikGuncelle("123");
+            hazirlik.UcusHazirlikSıfırlaPopUp();
+
+            MainHeaders.ResetSubHeaders();
 
 
             //var x = winiumDriver.FindElements(By.Name(""));
@@ -166,37 +164,48 @@ namespace ConsoleApp10
             //
             // MOTOR İŞLEMLERİ
             //
-            //motor.ClickMotorMenu();
-            //Thread.Sleep(350);
-            //motor.ClickMotorGostergelerTablo();
-            //Thread.Sleep(350);
+            motor.ClickMotorMenu();
+            motor.ClickMotorGostergeler();
+            motor.ClickMotorGostergelerTablo();
             //motor.ClickMotorGostergelerSecim("irtifa_radiobuton");
-            //Thread.Sleep(350);
             //motor.ClickMotorGostergelerMotorAyarlari();
-            //Thread.Sleep(350);
-            //motor.ClickMotorDiagnostikMenu(cruciatusElement);
-            //Thread.Sleep(350);
+            //motor.ClickMotorDiagnostikMenu();
             //motor.ClickMotorAyarlarMenu();
-            //Thread.Sleep(350);
 
+            //MainHeaders.ResetSubHeaders();
 
-
-            //
-            // YAKIT İŞLEMLERİ
-            //
+            ////
+            //// YAKIT İŞLEMLERİ
+            ////
             //yakit.ClickYakitMenu();
             //yakit.ClickYakitRadioButtons();
-            //yakit.ClickYakitYukle();
+            //yakit.ClickYakitYukle("50");
 
-            //
-            // GÜÇ İŞLEMLERİ
-            //
+            //MainHeaders.ResetSubHeaders();
+
+
+            ////
+            //// GÜÇ İŞLEMLERİ
+            ////
             //guc.ClickGucMenu();
             //guc.GucSistemBataryasi();
             //guc.ClickGucAyarlarMenu();
             //guc.GucAyarlarMenu();
 
+            //MainHeaders.ResetSubHeaders();
 
+            ////
+            //// GÜÇ İŞLEMLERİ
+            ////
+            //konfigurasyon.ClickKonfigurasyonMenu();
+            //konfigurasyon.ClickKameraHepsiYok();
+            //konfigurasyon.KonfigurasyonGonderHepsiYok();
+            //konfigurasyon.ClickKameraListViewAcik();
+            //konfigurasyon.KonfigurasyonGonderListviewVar();
+            //konfigurasyon.KonfigurasyonListviewGoruntu();
+            //konfigurasyon.KonfigurasyonGonderPopUpVar();
+            //konfigurasyon.KonfigurasyonDurumBilgilendirme();
+            //konfigurasyon.KonfigurasyonGonderSekmeVar();
         }
     }
 }

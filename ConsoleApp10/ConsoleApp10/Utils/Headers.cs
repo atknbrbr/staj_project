@@ -16,6 +16,5 @@ namespace ConsoleApp10.Utils
             Header = _Header;
             SubHeader = _SubHeader;
         }
-
     }
 }

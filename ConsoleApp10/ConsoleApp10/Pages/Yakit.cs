@@ -28,6 +28,7 @@ namespace ConsoleApp10.Pages
         public void ClickYakitMenu()
         {
             BtYakit.Click();
+            TakeScreenshot("Yakıt", 2);
             Thread.Sleep(500);
         }
 
@@ -40,6 +41,7 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(100);
             BtRadio3.Click();
             Thread.Sleep(250);
+            TakeScreenshot("Radio Buton", 2);
         }
 
         public void ClickYakitYukle(String yakit)
@@ -49,13 +51,13 @@ namespace ConsoleApp10.Pages
             Thread.Sleep(100);
             TxtEminyet.Click();
             Thread.Sleep(50);
-            MainHeaders.CreateSubFolders("Emniyet Acik", cruciatusElement, 2);
+            TakeScreenshot("Emniyet Acik", 2);
             Thread.Sleep(100);
             BtYakitGonder.Click();
             Thread.Sleep(100);
-            MainHeaders.CreateSubFolders("Aktarim Yapiliyor", cruciatusElement, 2);
+            TakeScreenshot("Aktarim Yapiliyor", 2);
             Thread.Sleep(10000);
-            MainHeaders.CreateSubFolders("Aktarim Yapildi", cruciatusElement, 2);
+            TakeScreenshot("Aktarim Yapildi", 2);
             Thread.Sleep(250);
         }
     }

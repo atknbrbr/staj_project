@@ -36,15 +36,15 @@ namespace ConsoleApp10.Tests
             // Çalışan uygulama işlemlerin yapılabilmesi için öne alınır
             //
             Thread.Sleep(1000);
-            SetForegroundWindowApp.setWindow();
+            SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
             Thread.Sleep(750);
-            SetForegroundWindowApp.setWindow();
+            SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
 
 
             //
             // Uygulama, tam ekran hale getirilir.
             //
-            SetFullscreen.Fullscreen();
+            SetFullscreen.Fullscreen("Sekmeli Arayüz");
 
             MainHeaders.GetMainHeaders(cruciatusElement);
         }

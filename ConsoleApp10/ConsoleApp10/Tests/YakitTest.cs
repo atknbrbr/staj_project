@@ -24,6 +24,7 @@ namespace ConsoleApp10.Tests
         [Test]
         public void ClickYakitMenuTest()
         {
+            yakit.ClickYakitMenu();
             MainHeaders.CreateSubFolders("Yakıt", cruciatusElement, 2);
             Thread.Sleep(500);
         }

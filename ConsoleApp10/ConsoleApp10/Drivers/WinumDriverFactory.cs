@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using ConsoleApp10.Utils;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Winium;
 using System;
@@ -8,12 +10,11 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Winium.Cruciatus.Core;
 using System.Threading.Tasks;
 using System.Windows.Automation;
+using Winium.Cruciatus.Core;
 using Winium.Cruciatus.Elements;
 using Winium.Cruciatus.Extensions;
-using OpenQA.Selenium.Interactions;
 
 namespace ConsoleApp10.Drivers
 {
@@ -22,6 +23,11 @@ namespace ConsoleApp10.Drivers
         private static WiniumDriver driver;
         private static CruciatusElement cruciatusElement;
         private static Actions actions;
+        private static bool windowCheck = false;
+
+        //
+        // WiniumDriver objesi çağırma metodu
+        //
         public static WiniumDriver GetWiniumDriver() {
 
             if (driver == null) 
@@ -31,7 +37,7 @@ namespace ConsoleApp10.Drivers
 
 
                 //
-                // Uygulamanın sıfırdan çalışıp çalışmayacağına karar verilir.
+                // Uygulamanın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
                 //
                 Process[] appProcesses = Process.GetProcessesByName("wpfuygulamasi");
                 if (appProcesses.Length == 0)
@@ -45,9 +51,8 @@ namespace ConsoleApp10.Drivers
                 }
 
                 //
-                // Driverın sıfırdan çalışıp çalışmayacağına karar verilir.
+                // Driverın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
                 //
-
                 Process[] driverProcesses = Process.GetProcessesByName("Winium.Desktop.Driver");
                 if (driverProcesses.Length == 0)
                 {
@@ -59,8 +64,6 @@ namespace ConsoleApp10.Drivers
                     startInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
                     Process process = Process.Start(startInfo);
-
-                    //driver = new WiniumDriver("C:/Users/PC_7583/Desktop/Winium.Desktop.Driver.exe", options, TimeSpan.FromSeconds(360));
                 }
 
                 driver = new WiniumDriver(new Uri("http://localhost:9999"), options, TimeSpan.FromSeconds(360));
@@ -68,6 +71,10 @@ namespace ConsoleApp10.Drivers
             return driver;
         }
 
+        //
+        // Bazı element bulma işlemlerinı kolaylaştırdığı için aynı zamanda WiniumCruciatus'dan CruciatusElement nesnesi de kullanılıyor.
+        // CruciatusElement objesi çağırma metodu
+        //
         public static CruciatusElement GetCruciatusElement()
         {
             if (cruciatusElement == null) 
@@ -78,6 +85,10 @@ namespace ConsoleApp10.Drivers
             return cruciatusElement;
         }
 
+        //
+        // İmleci hareket ettirebilmek için Selenium'dan gelen Actions objesi gerekiyor.
+        // Actions objesi çağırma metodu
+        //
         public static Actions GetActions()
         {
             if (actions == null)
@@ -85,6 +96,33 @@ namespace ConsoleApp10.Drivers
                 actions = new Actions(driver);
             }
             return actions;
+        }
+
+        public static void SetAppWindow()
+        {
+            if (!windowCheck)
+            {
+                //
+                // Çalışan uygulama işlemlerin yapılabilmesi için uygulama öne alınır
+                //
+                Thread.Sleep(1000);
+                SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
+                Thread.Sleep(750);
+                SetForegroundWindowApp.setWindow("Sekmeli Arayüz");
+
+
+                //
+                // Uygulama, tam ekran hale getirilir.
+                //
+                SetFullscreen.Fullscreen("Sekmeli Arayüz");
+                windowCheck = true;
+
+
+                //
+                // Uygulama üzerinden ana butonlar okunur.
+                //
+                MainHeaders.GetMainHeaders(cruciatusElement);
+            }
         }
     }
 }

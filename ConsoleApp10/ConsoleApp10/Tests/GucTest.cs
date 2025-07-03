@@ -25,6 +25,7 @@ namespace ConsoleApp10.Tests
         {
             guc.ClickGucMenu();
             MainHeaders.CreateSubFolders("Güç", cruciatusElement, 3, 0);
+            //MainHeaders.CreateSubFolders("Güç", cruciatusElement, 3, 0);
             Thread.Sleep(500);
         }
 

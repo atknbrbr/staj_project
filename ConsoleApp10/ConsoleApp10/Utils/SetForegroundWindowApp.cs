@@ -9,8 +9,8 @@ namespace ConsoleApp10.Utils
 {
     public static class SetForegroundWindowApp
     {
-        public static void setWindow() {
-            IntPtr mainProcess = FindWindow(null, "Sekmeli Arayüz");
+        public static void setWindow(String appName) {
+            IntPtr mainProcess = FindWindow(null, appName);
             SetForegroundWindow(mainProcess);
         }
     }

@@ -179,7 +179,7 @@
     <Compile Include="Utils\SetForegroundWindowApp.cs" />
     <Compile Include="Utils\SetFullscreen.cs" />
     <Compile Include="Utils\SliderCalculation.cs" />
-    <Compile Include="Utils\TakeScreenshot.cs" />
+    <Compile Include="Utils\ScreenCapture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

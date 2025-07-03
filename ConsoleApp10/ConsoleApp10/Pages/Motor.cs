@@ -24,8 +24,8 @@ namespace ConsoleApp10.Pages
 {
     public class Motor : BasePage
     {
-        
-        //private String headerName;
+        private static int ustLimit, altLimit, guncelDeger;
+        private static int fileName = 1;
 
         private IWebElement BtMotor => winiumDriver.FindElementById("Motor");
         private IWebElement CheckboxMotorTablo => winiumDriver.FindElementById("tablo_goster");
@@ -46,6 +46,7 @@ namespace ConsoleApp10.Pages
         public void ClickMotorMenu()
         {
             BtMotor.Click();
+            TakeScreenshot("Motor", 1);
             Thread.Sleep(500);
         }
 
@@ -53,6 +54,7 @@ namespace ConsoleApp10.Pages
         {
             BtMotor.Click();
             BtGostergeler.Click();
+            TakeScreenshot("", 1, 0, 0);
             Thread.Sleep(500);
         }
 
@@ -61,9 +63,8 @@ namespace ConsoleApp10.Pages
             BtMotor.Click();
             BtGostergeler.Click();
             CheckboxMotorTablo.Click();
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Gostergeler-TabloGoster");
+            TakeScreenshot("Tablo Göster", 1, 0, 0);
             Thread.Sleep(500);
-            //CheckboxMotorTablo.Click();
         }
 
         public bool ClickMotorGostergelerSecim(String btnName)
@@ -74,16 +75,15 @@ namespace ConsoleApp10.Pages
             {
                 IWebElement radioBtn = winiumDriver.FindElementById(btnName);
                 radioBtn.Click();
-                //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Gostergeler-Secim");
+                TakeScreenshot("Seçilen Değer-1", 1, 0, 0);
                 Thread.Sleep(200);
                 ComboGosterge.Click();
                 Thread.Sleep(200);
-                MainHeaders.CreateSubFolders("Seçilen Değer", cruciatusElement, 1, 0, 0);
+                TakeScreenshot("Seçilen Değer-2", 1, 0, 0);
                 Thread.Sleep(500);
-                //winiumDriver.FindElementById("irtifa_radiobuton").Click();
                 return true;
             }
-            catch (Exception ex) 
+            catch (Exception)
             { 
                 return false;
             }
@@ -96,22 +96,24 @@ namespace ConsoleApp10.Pages
             BtGostergeler.Click();
             try
             {
-                MainHeaders.CreateSubFolders("Motor Ayarları-1", cruciatusElement, 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-1", 1, 0, 0);
                 ComboMotorAyar1.Click();
                 Thread.Sleep(500);
+                TakeScreenshot("Motor Ayarları-2", 1, 0, 0);
                 ElemComboMotor1.Click();
                 Thread.Sleep(200);
+                TakeScreenshot("Motor Ayarları-3", 1, 0, 0);
                 ComboMotorAyar2.Click();
-                MainHeaders.CreateSubFolders("Motor Ayarları-2", cruciatusElement, 1, 0, 0);
                 Thread.Sleep(500);
+                TakeScreenshot("Motor Ayarları-4", 1, 0, 0);
                 ElemComboMotor2.Click();
                 Thread.Sleep(200);
-                MainHeaders.CreateSubFolders("Motor Ayarları-3", cruciatusElement, 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-5", 1, 0, 0);
 
                 Thread.Sleep(500);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -136,22 +138,22 @@ namespace ConsoleApp10.Pages
                     {
                         // Hava hızı
                         case 0:
-                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderHava, ustLimit, altLimit, guncelDeger);
+                            CheckSliders(SliderHava, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Rüzgar Hızı
                         case 4:
-                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderRuzgar, ustLimit, altLimit, guncelDeger);
+                            CheckSliders(SliderRuzgar, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Ortam Sıcaklığı
                         case 8:
-                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderSicaklık, ustLimit, altLimit, guncelDeger);
+                            CheckSliders(SliderSicaklık, ustLimit, altLimit, guncelDeger);
                             continue;
                         
                         // Motor Devri
                         case 12:
-                            SliderCalculation.CheckSliders(cruciatusElement, actions, SliderMotor, ustLimit, altLimit, guncelDeger);
+                            CheckSliders(SliderMotor, ustLimit, altLimit, guncelDeger);
                             continue;
 
                         default:
@@ -159,58 +161,174 @@ namespace ConsoleApp10.Pages
                     }
                 }
             }
-
-
-            //ReadOnlyCollection<IWebElement> texts = winiumDriver.FindElementsByClassName("TextBlock");
-            //foreach (IWebElement text in texts) 
-            //{
-            //    String x = text.GetAttribute("type");
-            //    if (x == "Motor Gücü")
-            //    {
-            //        Console.WriteLine("test");
-            //    }
-            //}
-
-
-            //Thread.Sleep(500);
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik");
-            //Thread.Sleep(200);
-            //IWebElement slider1 = winiumDriver.FindElementById("sliderHava");
-            //actions.MoveToElement(slider1, 5, 190).Perform();
-            //actions.Click().Perform();
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-1");
-            //Thread.Sleep(200);
-
-            //slider1 = winiumDriver.FindElementById("sliderRuzgar");
-            //actions.MoveToElement(slider1, 5, 10).Perform();
-            //for (int i = 0; i < 110; i++)
-            //{
-            //    actions.Click().Perform();
-            //}
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-2");
-            //Thread.Sleep(200);
-
-            //slider1 = winiumDriver.FindElementById("sliderSicaklik");
-            //actions.MoveToElement(slider1, 5, 190).Perform();
-            //actions.Click().Perform();
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-3");
-            //Thread.Sleep(200);
-
-            //slider1 = winiumDriver.FindElementById("sliderMotor");
-            //actions.MoveToElement(slider1, 5, 10).Perform();
-            //for (int i = 0; i < 70; i++)
-            //{
-            //    actions.Click().Perform();
-            //}
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-4");
-            //Thread.Sleep(200);
-
-            //for (int i = 0; i < 70; i++)
-            //{
-            //    actions.Click().Perform();
-            //}
-            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-5");
             Thread.Sleep(200);
+        }
+
+
+        public void CheckSliders(IWebElement slider1, int a, int b, int c)
+        {
+            if (fileName == 1)
+            {
+                TakeScreenshot(fileName.ToString(), 1, 0, 1); 
+                fileName++;
+            }
+
+            //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+            ustLimit = a;
+            altLimit = b;
+            guncelDeger = c;
+
+            if (guncelDeger < 0)
+            {
+                if (ustLimit < 0)
+                {
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+
+                else if (ustLimit >= 0)
+                {
+                    actions.MoveToElement(slider1, 5, 10).Perform();
+                    for (; guncelDeger <= 0; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (ustLimit > 80)
+                {
+                    for (; guncelDeger <= 80; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (ustLimit > 200)
+                {
+                    for (; guncelDeger <= 200; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+            }
+
+            else if (guncelDeger >= 0 && guncelDeger < 80)
+            {
+                if (altLimit < 0)
+                {
+                    actions.MoveToElement(slider1, 5, 190).Perform();
+                    for (; guncelDeger >= 0; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+
+                }
+                if (ustLimit > 80)
+                {
+                    actions.MoveToElement(slider1, 5, 10).Perform();
+                    for (; guncelDeger <= 80; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (ustLimit > 200)
+                {
+                    for (; guncelDeger <= 200; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+
+                }
+            }
+            else if (guncelDeger > 81 && guncelDeger < 200)
+            {
+                if (ustLimit > 200)
+                {
+                    actions.MoveToElement(slider1, 5, 10).Perform();
+                    for (; guncelDeger <= 200; guncelDeger++)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+
+                }
+                if (altLimit < 80)
+                {
+                    actions.MoveToElement(slider1, 5, 190).Perform();
+                    for (; guncelDeger >= 80; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (altLimit < 0)
+                {
+                    for (; guncelDeger >= 0; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+            }
+            else
+            {
+                if (altLimit < 200)
+                {
+                    actions.MoveToElement(slider1, 5, 190).Perform();
+                    for (; guncelDeger >= 200; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (altLimit < 80)
+                {
+                    actions.MoveToElement(slider1, 5, 190).Perform();
+                    for (; guncelDeger >= 80; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+                if (altLimit < 0)
+                {
+                    actions.MoveToElement(slider1, 5, 190).Perform();
+                    for (; guncelDeger >= 0; guncelDeger--)
+                    {
+                        actions.Click().Perform();
+                    }
+                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    //TakeScreenshot.CaptureApp("Motor-MotorDegerler-Diagnostik-" + fileName.ToString());
+                    fileName++;
+                }
+            }
         }
 
         public void ClickMotorAyarlarMenu()
@@ -219,6 +337,5 @@ namespace ConsoleApp10.Pages
             BtMotorAyarlar.Click();
             Thread.Sleep(200);
         }
-
     }
 }
