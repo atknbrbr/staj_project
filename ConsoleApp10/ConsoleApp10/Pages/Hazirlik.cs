@@ -16,7 +16,6 @@ namespace ConsoleApp10.Pages
     {
         private IWebElement BtHazirlık => winiumDriver.FindElementById("Hazırlık");
         private IWebElement TxtboxGorev => winiumDriver.FindElementById("txtAAlt");
-        private IWebElement BtGorevSifirla => winiumDriver.FindElementById("Sıfırla");
         private IWebElement TxtboxKalkis => winiumDriver.FindElementById("kalkis");
         private IWebElement BtKalkisSifirla => winiumDriver.FindElementById("sifirla_buton");
         private IWebElement BtKalkisSifirlaHayir => winiumDriver.FindElementById("hayır");

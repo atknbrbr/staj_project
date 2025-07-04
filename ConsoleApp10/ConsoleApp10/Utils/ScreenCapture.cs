@@ -36,7 +36,7 @@ namespace ConsoleApp10.Utils
                 Directory.CreateDirectory(path + "/" + word);
                 path = path + "/" + word;
 
-                if (Int32.TryParse(word, out int test) || word == null || word == words[words.Length - 2])
+                if (word == null || word == words[words.Length - 2])
                 {
                     break;
                 }
@@ -49,6 +49,7 @@ namespace ConsoleApp10.Utils
             {
                 IntPtr process = mainProcess[0].MainWindowHandle;
 
+                // Ekran görüntüsü alma thread i oluşturulur.
                 Thread t = new Thread(() =>
                 {
                     if (PInvoke.IsIconic(process))
@@ -63,6 +64,7 @@ namespace ConsoleApp10.Utils
 
                     img = System.Windows.Forms.Clipboard.GetImage();
 
+                    // Aşağıdaki kısım, panonun temizlenmesi için çalışır.
                     IntPtr clipWindow = PInvoke.GetOpenClipboardWindow();
                     PInvoke.OpenClipboard(clipWindow);
                     PInvoke.EmptyClipboard();
@@ -71,9 +73,9 @@ namespace ConsoleApp10.Utils
 
                 });
 
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start();
-                t.Join();
+                t.SetApartmentState(ApartmentState.STA);        // Thread yapılandırılır
+                t.Start();                                      // Thread çalıştırılır
+                t.Join();                                       // Ana thread, t threadinin bitmesini bekler 
 
                 String date = path + "/" + words.Last() + ".png";
 

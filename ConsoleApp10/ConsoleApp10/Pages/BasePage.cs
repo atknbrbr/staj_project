@@ -12,7 +12,8 @@ using static ConsoleApp10.Drivers.WinumDriverFactory;
 namespace ConsoleApp10.Pages
 {
     //
-    // Tüm sayfaların miras aldığı Base sınıf. Bu sınıfta driverlar ve driver bilgisi olmadan ekran görüntüsü alınabilmesi için TakeScreenshot sınıfı bulunmaktadır
+    // Tüm sayfaların miras aldığı Base sınıf. Bu sınıfta driverlar, driverların tanımlanması
+    // ve dışarıdan CruciatusElement bilgisi olmadan ekran görüntüsü alınabilmesi için TakeScreenshot sınıfı bulunmaktadır
     //
     public class BasePage
     {

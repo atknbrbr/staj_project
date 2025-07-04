@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using static ConsoleApp10.Utils.PInvoke;
 
 namespace ConsoleApp10.Utils
-{
+{   /*
     internal class OldTakeScreenshot
     {
         private void OldSS()
@@ -47,4 +47,5 @@ namespace ConsoleApp10.Utils
             }
         }
     }
+    */
 }

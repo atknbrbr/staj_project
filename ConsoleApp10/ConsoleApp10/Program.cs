@@ -64,18 +64,18 @@ namespace ConsoleApp10
             // Her bir ana başlık sonrasında, alt başlıkların tekrar okunması için önceden tutulan alt başlıklar temizlenir
             MainHeaders.ResetSubHeaders();
 
-
             kamera.ClickKameraHepsiYok();                       //Konfigurasyon işlemleri öncesi kamera testi
+
             //
             // KONFİGÜRASYON İŞLEMLERİ
             //
-            konfigurasyon.ClickKonfigurasyonMenu();
+            konfigurasyon.ClickKonfigurasyonMenu(false);
             konfigurasyon.KonfigurasyonGonderHepsiYok();
-            konfigurasyon.KonfigurasyonGonderListviewVar();
+            konfigurasyon.KonfigurasyonGonderListviewVar(false);
             konfigurasyon.KonfigurasyonListviewGoruntu();
             konfigurasyon.KonfigurasyonGonderPopUpVar();
             konfigurasyon.KonfigurasyonDurumBilgilendirme();
-            konfigurasyon.KonfigurasyonGonderSekmeVar();
+            konfigurasyon.KonfigurasyonGonderSekmeVar(false);
 
             kamera.ClickKameraListViewAcik();                   //Konfigurasyon işlemleri sonrası kamera testi
         }

@@ -22,7 +22,6 @@ namespace ConsoleApp10.Pages
         private IWebElement TxtPART => winiumDriver.FindElementById("PART_TextBox");
         private IWebElement TxtEminyet => winiumDriver.FindElementById("Emniyet");
         private IWebElement BtYakitGonder => winiumDriver.FindElementById("btnGonder");
-        private IWebElement ElemComboMotor2 => winiumDriver.FindElementById("combobox_230");
 
         //
         // Yakıt başlığına tıklama

@@ -25,7 +25,7 @@ namespace ConsoleApp10.Tests
         [Test]
         public void ClickKonfigurasyonMenuTest()
         {
-            konfigurasyon.ClickKonfigurasyonMenu();
+            konfigurasyon.ClickKonfigurasyonMenu(false);
             MainHeaders.CreateSubFolders("Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
@@ -33,7 +33,7 @@ namespace ConsoleApp10.Tests
         [Test]
         public void KonfigurasyonGonderListviewVarTest()
         {
-            konfigurasyon.KonfigurasyonGonderListviewVar();
+            konfigurasyon.KonfigurasyonGonderListviewVar(false);
             MainHeaders.CreateSubFolders("ListView Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
@@ -49,7 +49,7 @@ namespace ConsoleApp10.Tests
         [Test]
         public void KonfigurasyonGonderSekmeVarTest()
         {
-            konfigurasyon.KonfigurasyonGonderSekmeVar();
+            konfigurasyon.KonfigurasyonGonderSekmeVar(false);
             MainHeaders.CreateSubFolders("Sekme Gonder Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }

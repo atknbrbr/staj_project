@@ -13,8 +13,6 @@ namespace ConsoleApp10.Utils
 {
     public class SetFullscreen
     {
-        public const int SHOWMAXIMIZED = 3;
-
         public static void Fullscreen(String appName)
         {
             IntPtr mainProcess = FindWindow(null, appName);

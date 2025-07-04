@@ -69,6 +69,7 @@ namespace ConsoleApp10.Utils
 
             if (subheader1.Count == 0)
             {
+                // Belirli yatak eksene göre buton arama işlemi
                 var subHeader1 = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='Button']"))
                                             .ToList()
                                             .Where(y => y.Properties.BoundingRectangle.Top == 85);
@@ -90,10 +91,11 @@ namespace ConsoleApp10.Utils
 
             if (subheader2.Count == 0)
             {
+                // Belirli yatak eksene göre buton arama işlemi
                 var subHeader2 = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("//*[@ClassName='Button']"))
                                                                         .ToList()
                                                                         .Where(z => z.Properties.BoundingRectangle.Top == 137);
-
+                // Buton bilgilerini(isimlerini) kaydetme
                 foreach (var header2 in subHeader2)
                 {
                     subheader2.Add(header2.Properties.Name);
@@ -102,8 +104,6 @@ namespace ConsoleApp10.Utils
             fullPath += subheader2[sub2] + "-";
             ScreenCapture.CaptureApp(fullPath + description);
             return;
-
         }
-
     }
 }

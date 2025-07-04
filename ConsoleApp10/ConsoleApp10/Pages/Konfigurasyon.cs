@@ -47,10 +47,10 @@ namespace ConsoleApp10.Pages
         //
         // Konfigürasyon başlığına tıklama
         //
-        public void ClickKonfigurasyonMenu()
+        public void ClickKonfigurasyonMenu(bool beCalledInKamera)
         {
             BtKonfigurasyon.Click();
-            TakeScreenshot("Konfigurasyon", 4);
+            if (!beCalledInKamera) TakeScreenshot("Konfigurasyon", 4);
             ReadComboBoxes();
         }
 
@@ -67,7 +67,7 @@ namespace ConsoleApp10.Pages
         //
         // ListView var Konfigürasyonunu gönderme
         //
-        public void KonfigurasyonGonderListviewVar()
+        public void KonfigurasyonGonderListviewVar(bool beCalledInKamera)
         {
             BtKonfigurasyon.Click();
             comboListView.FindElementByUid("KonfigurasyonCombobox").Click();
@@ -76,7 +76,7 @@ namespace ConsoleApp10.Pages
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
-            TakeScreenshot("ListView Konfigurasyon", 4);
+            if (!beCalledInKamera) TakeScreenshot("ListView Konfigurasyon", 4);
         }
 
         //
@@ -136,7 +136,7 @@ namespace ConsoleApp10.Pages
         //
         // Sekme Gönder Konfigürasyonunu gönderme
         //
-        public void KonfigurasyonGonderSekmeVar()
+        public void KonfigurasyonGonderSekmeVar(bool beCalledInKamera)
         {
             BtKonfigurasyon.Click();
             comboSekme.FindElementByUid("KonfigurasyonCombobox").Click();
@@ -144,7 +144,7 @@ namespace ConsoleApp10.Pages
             var secenekler = comboSekme.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click(); BtKonfigurasyonGonder.Click();
-            TakeScreenshot("Sekme Gonder Konfigurasyon", 4);
+            if (!beCalledInKamera) TakeScreenshot("Sekme Gonder Konfigurasyon", 4);
         }
 
         //

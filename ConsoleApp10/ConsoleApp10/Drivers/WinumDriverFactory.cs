@@ -46,7 +46,7 @@ namespace ConsoleApp10.Drivers
                 // Arkada çalışan uygulama yoksa, uygulama dizini önceden verilmelidir.
                 if (appProcesses.Length == 0)
                 {
-                    options.ApplicationPath = "C:\\Users\\PC_7583\\Desktop\\Debug\\net8.0-windows\\wpfuygulamasi.exe";
+                    options.ApplicationPath = "C:\\Users\\PC_7583\\Desktop\\uygulamaV2\\net8.0-windows\\wpfuygulamasi.exe";
                     options.DebugConnectToRunningApp = false;
                 }
                 else
@@ -88,6 +88,8 @@ namespace ConsoleApp10.Drivers
                 // Driverın sıfırdan çalışıp çalışmama durumu kontrol edilip aksiyon alınır.
                 //
                 Process[] driverProcesses = Process.GetProcessesByName("Winium.Desktop.Driver");
+                
+                // Bu kısımda, driver cmd ekranı açılmayacak şekilde çalıştırılır.
                 if (driverProcesses.Length == 0)
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();

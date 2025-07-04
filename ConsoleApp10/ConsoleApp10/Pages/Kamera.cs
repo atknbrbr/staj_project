@@ -23,7 +23,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickKameraHepsiYok()
         {
-            konfigurasyon.ClickKonfigurasyonMenu();
+            konfigurasyon.ClickKonfigurasyonMenu(true);
             BtKamera.Click();
             BtKameraKontrol.Click();
             TakeScreenshot("Kamera Test(Tum konfigurasyonlar kapalı)", 5);
@@ -34,9 +34,9 @@ namespace ConsoleApp10.Pages
         //
         public void ClickKameraListViewAcik()
         {
-            konfigurasyon.ClickKonfigurasyonMenu();
-            konfigurasyon.KonfigurasyonGonderListviewVar();
-            konfigurasyon.KonfigurasyonGonderSekmeVar();
+            konfigurasyon.ClickKonfigurasyonMenu(true);
+            konfigurasyon.KonfigurasyonGonderListviewVar(true);
+            konfigurasyon.KonfigurasyonGonderSekmeVar(true);
             BtKamera.Click();
             BtKameraKontrol.Click();
             TakeScreenshot("ListView Açıkken Kamera Bağlantı", 5);
