@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\drivers\\winumdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\guc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\guc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\drivers\\winumdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\drivers\\winumdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\tests\\motortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\tests\\motortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\tests\\motortest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,20 +23,16 @@
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\tests\\yakittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\tests\\kameratest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\tests\\kameratest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\tests\\kameratest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\tests\\hazirliktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\tests\\hazirliktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\tests\\hazirliktest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\guc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\guc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Program.cs",
@@ -67,12 +67,11 @@
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T06:23:46.821Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BasePage.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\BasePage.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\BasePage.cs",
@@ -80,12 +79,11 @@
               "RelativeToolTip": "ConsoleApp10\\Pages\\BasePage.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAjwB8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:06:35.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T08:06:35.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MotorTest.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\MotorTest.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Tests\\MotorTest.cs",
@@ -93,12 +91,11 @@
               "RelativeToolTip": "ConsoleApp10\\Tests\\MotorTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:07:50.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T08:07:50.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "KameraTest.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\KameraTest.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Tests\\KameraTest.cs",
@@ -106,12 +103,11 @@
               "RelativeToolTip": "ConsoleApp10\\Tests\\KameraTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:06:44.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T08:06:44.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HazirlikTest.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\HazirlikTest.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Tests\\HazirlikTest.cs",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "ConsoleApp10\\Tests\\HazirlikTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:06:43.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T08:06:43.715Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "ConsoleApp10\\Pages\\Motor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T10:43:19.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T10:43:19.667Z"
             },
             {
               "$type": "Document",
@@ -145,12 +139,11 @@
               "RelativeToolTip": "ConsoleApp10\\Tests\\BaseTest.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T07:56:02.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T07:56:02.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "YakitTest.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\YakitTest.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Tests\\YakitTest.cs",
@@ -158,12 +151,11 @@
               "RelativeToolTip": "ConsoleApp10\\Tests\\YakitTest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T12:39:30.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-04T12:39:30.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WinumDriverFactory.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Drivers\\WinumDriverFactory.cs",
@@ -176,13 +168,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Guc.cs",
               "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Guc.cs",
               "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\Guc.cs",
               "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Guc.cs",
               "RelativeToolTip": "ConsoleApp10\\Pages\\Guc.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAD4v2IAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAIAwwDEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T11:25:14.105Z",
               "EditorCaption": ""
@@ -197,8 +189,7 @@
               "RelativeToolTip": "ConsoleApp10\\Pages\\Konfigurasyon.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAWwIoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T09:24:20.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-04T09:24:20.886Z"
             }
           ]
         },
