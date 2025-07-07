@@ -25,23 +25,15 @@ namespace ConsoleApp10.Tests
         [Test]
         public void ClickKonfigurasyonMenuTest()
         {
-            konfigurasyon.ClickKonfigurasyonMenu();
+            konfigurasyon.ClickKonfigurasyonMenu(false);
             MainHeaders.CreateSubFolders("Konfigurasyon", cruciatusElement, 4);
-            Thread.Sleep(500);
-        }
-
-        [Test]
-        public void ClickKameraHepsiYokTest()
-        {
-            konfigurasyon.ClickKameraHepsiYok();
-            MainHeaders.CreateSubFolders("Kamera Test(Tum konfigurasyonlar kapalı)", cruciatusElement, 4);
             Thread.Sleep(500);
         }
 
         [Test]
         public void KonfigurasyonGonderListviewVarTest()
         {
-            konfigurasyon.KonfigurasyonGonderListviewVar();
+            konfigurasyon.KonfigurasyonGonderListviewVar(false);
             MainHeaders.CreateSubFolders("ListView Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
@@ -57,7 +49,7 @@ namespace ConsoleApp10.Tests
         [Test]
         public void KonfigurasyonGonderSekmeVarTest()
         {
-            konfigurasyon.KonfigurasyonGonderSekmeVar();
+            konfigurasyon.KonfigurasyonGonderSekmeVar(false);
             MainHeaders.CreateSubFolders("Sekme Gonder Konfigurasyon", cruciatusElement, 4);
             Thread.Sleep(500);
         }
@@ -67,15 +59,6 @@ namespace ConsoleApp10.Tests
         {
             konfigurasyon.KonfigurasyonDurumBilgilendirme();
             //TakeScreenshot.CaptureApp("Konfigurasyon");
-            Thread.Sleep(500);
-        }
-
-        [Test]
-        public void ClickKameraListViewAcikTest()
-        {
-            konfigurasyon.ClickKameraListViewAcik();
-            MainHeaders.CreateSubFolders("ListView Açıkken Kamera Bağlantı", cruciatusElement, 4);
-            //TakeScreenshot.CaptureApp("Konfigurasyon-ListView Açıkken Kamera Bağlantı");
             Thread.Sleep(500);
         }
 

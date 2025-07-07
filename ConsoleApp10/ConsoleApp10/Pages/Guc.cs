@@ -1,4 +1,5 @@
 ﻿using ConsoleApp10.Utils;
+using NLog;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Winium;
@@ -27,6 +28,7 @@ namespace ConsoleApp10.Pages
         public void ClickGucMenu()
         {
             BtGuc.Click();
+            TakeScreenshot("Güç", 3, 0);
         }
 
         //
@@ -37,7 +39,7 @@ namespace ConsoleApp10.Pages
             BtGuc.Click();
             BtGucSistemi.Click();
             int imageName = 1;
-            MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
+            TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
             imageName++;
             Thread.Sleep(100);
             for (int i = 0; i < 62; i++)
@@ -47,19 +49,19 @@ namespace ConsoleApp10.Pages
                 switch (i)
                 {
                     case (1):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
+                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (31):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
+                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (61):
-                        MainHeaders.CreateSubFolders("Batarya-" + imageName.ToString(), cruciatusElement, 3, 0);
+                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
@@ -77,6 +79,8 @@ namespace ConsoleApp10.Pages
         {
             BtGuc.Click();
             BtGucSistemi.Click();
+            TakeScreenshot("Güç Sistemi", 3, 0);
+
         }
 
         //
@@ -86,6 +90,7 @@ namespace ConsoleApp10.Pages
         {
             BtGuc.Click();
             BtGucAyarlar.Click();
+            TakeScreenshot("Güç Ayarlar", 3, 0);
         }
 
         //
@@ -95,10 +100,10 @@ namespace ConsoleApp10.Pages
         {
             BtGuc.Click();
             BtGucAyarlar.Click();
-            MainHeaders.CreateSubFolders("Devam Et", cruciatusElement, 3, 1);
+            TakeScreenshot("Devam Et", 3, 1);
             Thread.Sleep(2500);
             BtDurklat.Click();
-            MainHeaders.CreateSubFolders("Durdur", cruciatusElement, 3, 1);
+            TakeScreenshot("Durdur", 3, 1);
         }
     }
 }

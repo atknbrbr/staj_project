@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\pages\\konfigurasyon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\konfigurasyon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\utils\\mainheaders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\utils\\mainheaders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\utils\\takescreenshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\utils\\takescreenshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\utils\\slidercalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\utils\\slidercalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\pages\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\pages\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\tests\\konfigurasyontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\tests\\konfigurasyontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\ConsoleApp10.csproj|C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\consoleapp10\\pages\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\ConsoleApp10.csproj|solutionrelative:consoleapp10\\pages\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|c:\\users\\pc_7583\\desktop\\proje_repo\\staj_project\\consoleapp10\\consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{847A19F5-FC55-42AC-A686-351505D928B2}|ConsoleApp10\\Staj_Proje01.csproj|solutionrelative:consoleapp10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,96 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KonfigurasyonTest.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\KonfigurasyonTest.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Tests\\KonfigurasyonTest.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Tests\\KonfigurasyonTest.cs",
-              "RelativeToolTip": "ConsoleApp10\\Tests\\KonfigurasyonTest.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAmwFwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T11:38:44.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Konfigurasyon.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Konfigurasyon.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\Konfigurasyon.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Konfigurasyon.cs",
-              "RelativeToolTip": "ConsoleApp10\\Pages\\Konfigurasyon.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAlwFYAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp10\\Program.cs",
+              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Program.cs",
+              "RelativeToolTip": "ConsoleApp10\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T11:38:47.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Motor.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Motor.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\Motor.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Motor.cs",
-              "RelativeToolTip": "ConsoleApp10\\Pages\\Motor.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAowIoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T11:21:03.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Motor.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Motor.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Pages\\Motor.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Pages\\Motor.cs",
-              "RelativeToolTip": "ConsoleApp10\\Pages\\Motor.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEEAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T05:39:12.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainHeaders.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\MainHeaders.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Utils\\MainHeaders.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\MainHeaders.cs",
-              "RelativeToolTip": "ConsoleApp10\\Utils\\MainHeaders.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:57:35.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TakeScreenshot.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\TakeScreenshot.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Utils\\TakeScreenshot.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\TakeScreenshot.cs",
-              "RelativeToolTip": "ConsoleApp10\\Utils\\TakeScreenshot.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:45:28.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SliderCalculation.cs",
-              "DocumentMoniker": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\SliderCalculation.cs",
-              "RelativeDocumentMoniker": "ConsoleApp10\\Utils\\SliderCalculation.cs",
-              "ToolTip": "C:\\Users\\PC_7583\\Desktop\\Proje_Repo\\staj_project\\ConsoleApp10\\ConsoleApp10\\Utils\\SliderCalculation.cs",
-              "RelativeToolTip": "ConsoleApp10\\Utils\\SliderCalculation.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAD4vxEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:42:55.247Z",
+              "WhenOpened": "2025-07-03T06:23:46.821Z",
+              "IsPinned": true,
               "EditorCaption": ""
             }
           ]

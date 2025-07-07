@@ -30,23 +30,8 @@ namespace ConsoleApp10.Tests
             Thread.Sleep(1000);
             cruciatusElement = GetCruciatusElement();
             Thread.Sleep(750);
-            actions = new Actions(driver);
-
-            //
-            // Çalışan uygulama işlemlerin yapılabilmesi için öne alınır
-            //
-            Thread.Sleep(1000);
-            SetForegroundWindowApp.setWindow();
-            Thread.Sleep(750);
-            SetForegroundWindowApp.setWindow();
-
-
-            //
-            // Uygulama, tam ekran hale getirilir.
-            //
-            SetFullscreen.Fullscreen();
-
-            MainHeaders.GetMainHeaders(cruciatusElement);
+            actions = GetActions();
+            SetAppWindow();
         }
 
         //[TearDown]

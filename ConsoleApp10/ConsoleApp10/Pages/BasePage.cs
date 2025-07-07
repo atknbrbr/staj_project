@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Interactions;
+﻿using ConsoleApp10.Utils;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Winium;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ using static ConsoleApp10.Drivers.WinumDriverFactory;
 
 namespace ConsoleApp10.Pages
 {
+    //
+    // Tüm sayfaların miras aldığı Base sınıf. Bu sınıfta driverlar, driverların tanımlanması
+    // ve dışarıdan CruciatusElement bilgisi olmadan ekran görüntüsü alınabilmesi için TakeScreenshot sınıfı bulunmaktadır
+    //
     public class BasePage
     {
         protected WiniumDriver winiumDriver;
@@ -19,8 +24,15 @@ namespace ConsoleApp10.Pages
         public BasePage() 
         {
             winiumDriver = GetWiniumDriver();
-            actions = new Actions(winiumDriver);
+            actions = GetActions();
             cruciatusElement = GetCruciatusElement();
+            SetAppWindow();
         }
+
+        public void TakeScreenshot(String description, int mainHeader, int sub1 = -1, int sub2 = -1)
+        {
+            MainHeaders.CreateSubFolders(description, cruciatusElement, mainHeader, sub1, sub2);
+        }
+
     }
 }
