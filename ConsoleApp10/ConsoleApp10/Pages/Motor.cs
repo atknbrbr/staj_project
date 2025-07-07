@@ -59,7 +59,7 @@ namespace ConsoleApp10.Pages
         {
             BtMotor.Click();
             BtGostergeler.Click();
-            TakeScreenshot("", 1, 0, 0);
+            TakeScreenshot("Göstergeler", 1, 0, 0);
             Thread.Sleep(500);
         }
 
@@ -110,19 +110,19 @@ namespace ConsoleApp10.Pages
             BtGostergeler.Click();
             try
             {
-                TakeScreenshot("Motor Ayarları-1", 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-motor1", 1, 0, 0);
                 ComboMotorAyar1.Click();
                 Thread.Sleep(500);
-                TakeScreenshot("Motor Ayarları-2", 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-motor2", 1, 0, 0);
                 ElemComboMotor1.Click();
                 Thread.Sleep(200);
-                TakeScreenshot("Motor Ayarları-3", 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-motor3", 1, 0, 0);
                 ComboMotorAyar2.Click();
                 Thread.Sleep(500);
-                TakeScreenshot("Motor Ayarları-4", 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-motor4", 1, 0, 0);
                 ElemComboMotor2.Click();
                 Thread.Sleep(200);
-                TakeScreenshot("Motor Ayarları-5", 1, 0, 0);
+                TakeScreenshot("Motor Ayarları-motor5", 1, 0, 0);
 
                 Thread.Sleep(500);
                 return true;
@@ -194,7 +194,7 @@ namespace ConsoleApp10.Pages
         {
             if (fileName == 1)
             {
-                TakeScreenshot(fileName.ToString(), 1, 0, 1); 
+                TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1); 
                 fileName++;
             }
 
@@ -206,7 +206,7 @@ namespace ConsoleApp10.Pages
             {
                 if (ustLimit < 0)
                 {
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
 
@@ -217,7 +217,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 80)
@@ -226,7 +226,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -235,7 +235,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
             }
@@ -249,7 +249,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
 
                 }
@@ -260,7 +260,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -269,7 +269,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
 
                 }
@@ -283,7 +283,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
 
                 }
@@ -294,7 +294,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -303,7 +303,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
             }
@@ -316,7 +316,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 80)
@@ -326,7 +326,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -336,7 +336,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot(fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
                     fileName++;
                 }
             }
@@ -349,6 +349,7 @@ namespace ConsoleApp10.Pages
         {
             BtMotor.Click();
             BtMotorAyarlar.Click();
+            TakeScreenshot("Motor Ayarlar" + fileName.ToString(), 1, 1);
             Thread.Sleep(200);
         }
     }

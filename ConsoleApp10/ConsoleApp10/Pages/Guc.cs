@@ -39,7 +39,7 @@ namespace ConsoleApp10.Pages
             BtGuc.Click();
             BtGucSistemi.Click();
             int imageName = 1;
-            TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
+            TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
             imageName++;
             Thread.Sleep(100);
             for (int i = 0; i < 62; i++)
@@ -49,19 +49,19 @@ namespace ConsoleApp10.Pages
                 switch (i)
                 {
                     case (1):
-                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
+                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (31):
-                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
+                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
 
                     case (61):
-                        TakeScreenshot("Batarya-" + imageName.ToString(), 3, 0);
+                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
                         imageName++;
                         Thread.Sleep(100);
                         continue;
