@@ -1,19 +1,12 @@
-﻿using ConsoleApp10.Utils;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Winium;
+﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleApp10.Pages
 {
     public class Hazirlik : BasePage
     {
+        private bool isClicked = false;
         private IWebElement BtHazirlık => winiumDriver.FindElementById("Hazırlık");
         private IWebElement TxtboxGorev => winiumDriver.FindElementById("txtAAlt");
         private IWebElement TxtboxKalkis => winiumDriver.FindElementById("kalkis");
@@ -26,6 +19,7 @@ namespace ConsoleApp10.Pages
         public void ClickHazirlikMenu()
         {
             BtHazirlık.Click();
+            isClicked = true;
             TakeScreenshot("Hazırlık ana ekran", 0);
             Thread.Sleep(500);
         }
@@ -35,12 +29,11 @@ namespace ConsoleApp10.Pages
         //
         public void GorevHazirlikGuncelle(String text)
         {
-            BtHazirlık.Click();
+            if (!isClicked) return;
             TxtboxGorev.Click();
             TxtboxGorev.SendKeys(text);
             TakeScreenshot("Görev Hazırlık", 0);
             Thread.Sleep(500);
-            //BtGorevSifirla.Click();
         }
 
         //
@@ -48,12 +41,11 @@ namespace ConsoleApp10.Pages
         //
         public void UcusHazirlikGuncelle(String test)
         {
-            BtHazirlık.Click();
+            if (!isClicked) return;
             TxtboxKalkis.Click();
             TxtboxKalkis.SendKeys(test);
             TakeScreenshot("Uçuş Hazırlık", 0);
             Thread.Sleep(500);
-            //BtKalkisSifirla.Click();
         }
 
         //
@@ -61,7 +53,7 @@ namespace ConsoleApp10.Pages
         //
         public void UcusHazirlikSıfırlaPopUp()
         {
-            BtHazirlık.Click();
+            if (!isClicked) return;
             BtKalkisSifirla.Click();
             TakeScreenshot("Uçuş Hazırlık-Sıfırla Pop Up", 0);
             Thread.Sleep(300);

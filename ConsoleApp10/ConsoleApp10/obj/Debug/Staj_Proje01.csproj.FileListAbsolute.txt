@@ -293,7 +293,6 @@ C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\bin\D
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\obj\Debug\Staj_Proje01.csproj.AssemblyReference.cache
-C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe.config
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\obj\Debug\Staj_Proje01.csproj.CoreCompileInputs.cache
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\obj\Debug\Staj_Pro.7ADCBEB5.Up2Date
 C:\Users\PC_7583\Desktop\Proje_Repo\staj_project\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe

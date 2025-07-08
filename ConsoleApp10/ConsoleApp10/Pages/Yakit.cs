@@ -1,19 +1,12 @@
-﻿using ConsoleApp10.Utils;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Winium;
+﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using Winium.Cruciatus.Elements;
 
 namespace ConsoleApp10.Pages
 {
     public class Yakit : BasePage
     {
+        private bool isClicked = false;
 
         private IWebElement BtYakit => winiumDriver.FindElementById("Yakıt");
         private IWebElement BtRadio1 => winiumDriver.FindElementById("radio1");
@@ -29,6 +22,7 @@ namespace ConsoleApp10.Pages
         public void ClickYakitMenu()
         {
             BtYakit.Click();
+            isClicked = true;
             TakeScreenshot("Yakıt", 2);
             Thread.Sleep(500);
         }
@@ -38,7 +32,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickYakitRadioButtons()
         {
-            BtYakit.Click();
+            if (!isClicked) return;
             BtRadio1.Click();
             Thread.Sleep(100);
             BtRadio2.Click();
@@ -53,7 +47,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickYakitYukle(String yakit)
         {
-            BtYakit.Click();
+            if (!isClicked) return;
             TxtPART.SendKeys(yakit);
             Thread.Sleep(100);
             TxtEminyet.Click();

@@ -1,21 +1,13 @@
 ﻿using ConsoleApp10.Utils;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Winium;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing.Imaging;
 using System.Linq;
-using System.Text;
 using System.Management;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Automation;
-using Winium.Cruciatus.Core;
 using Winium.Cruciatus.Elements;
-using Winium.Cruciatus.Extensions;
 
 namespace ConsoleApp10.Drivers
 {
@@ -60,7 +52,7 @@ namespace ConsoleApp10.Drivers
                         }
                     }
 
-                    // Burada çalışan uygulama dair dizin bulma işlemi gerçekleşir
+                    // Burada çalışan uygulama dair dizin bulma işlemi gerçekleşir (WMI (Windows Management Instrumentation) kullanır.)
                     var wmiQueryString = "SELECT ProcessId, ExecutablePath, CommandLine FROM Win32_Process";
                     using (var searcher = new ManagementObjectSearcher(wmiQueryString))
                     using (var results = searcher.Get())
@@ -89,7 +81,7 @@ namespace ConsoleApp10.Drivers
                 //
                 Process[] driverProcesses = Process.GetProcessesByName("Winium.Desktop.Driver");
                 
-                // Bu kısımda, driver cmd ekranı açılmayacak şekilde çalıştırılır.
+                // Bu kısımda, driver cmd ekranı açılmayacak şekilde sıfırdan process çalıştırılır. 
                 if (driverProcesses.Length == 0)
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();

@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Winium.Cruciatus;
-using static ConsoleApp10.Utils.PInvoke;
 using System.Threading;
 
 namespace ConsoleApp10.Utils
@@ -19,7 +14,6 @@ namespace ConsoleApp10.Utils
     //
     public class ScreenCapture
     {
-        private const int SW_RESTORE = 9;
         private static String path;
 
         //

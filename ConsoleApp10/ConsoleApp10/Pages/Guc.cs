@@ -1,21 +1,11 @@
-﻿using ConsoleApp10.Utils;
-using NLog;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Winium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using OpenQA.Selenium;
 using System.Threading;
-using System.Threading.Tasks;
-using Winium.Cruciatus.Elements;
-
 
 namespace ConsoleApp10.Pages
 {
     public class Guc : BasePage
     {
+        private bool isClicked = false;
         private IWebElement BtGuc => winiumDriver.FindElementById("Güc");
         private IWebElement SliderGuc => winiumDriver.FindElementById("bataryaSecimi");
         private IWebElement BtGucSistemi => winiumDriver.FindElementById("Güc_Sistemi");
@@ -28,6 +18,7 @@ namespace ConsoleApp10.Pages
         public void ClickGucMenu()
         {
             BtGuc.Click();
+            isClicked = true;
             TakeScreenshot("Güç", 3, 0);
         }
 
@@ -36,38 +27,21 @@ namespace ConsoleApp10.Pages
         //
         public void GucSistemBataryasi()
         {
-            BtGuc.Click();
+            if (!isClicked) return;
             BtGucSistemi.Click();
             int imageName = 1;
-            TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
+            TakeScreenshot($"Batarya{imageName}", 3, 0);
             imageName++;
             Thread.Sleep(100);
             for (int i = 0; i < 62; i++)
             {
                 actions.MoveToElement(SliderGuc, 85, 10).Perform();
                 actions.Click().Perform();
-                switch (i)
+                if (i > 0 && (i - 1) % 30 == 0)
                 {
-                    case (1):
-                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
-                        imageName++;
-                        Thread.Sleep(100);
-                        continue;
-
-                    case (31):
-                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
-                        imageName++;
-                        Thread.Sleep(100);
-                        continue;
-
-                    case (61):
-                        TakeScreenshot("Batarya" + imageName.ToString(), 3, 0);
-                        imageName++;
-                        Thread.Sleep(100);
-                        continue;
-
-                    default:
-                        break;
+                    TakeScreenshot($"Batarya{imageName}", 3, 0);
+                    imageName++;
+                    Thread.Sleep(100);
                 }
             }
         }
@@ -77,10 +51,9 @@ namespace ConsoleApp10.Pages
         //
         public void ClickGucSistemiMenu()
         {
-            BtGuc.Click();
+            if (!isClicked) return;
             BtGucSistemi.Click();
             TakeScreenshot("Güç Sistemi", 3, 0);
-
         }
 
         //
@@ -88,7 +61,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickGucAyarlarMenu()
         {
-            BtGuc.Click();
+            if (!isClicked) return;
             BtGucAyarlar.Click();
             TakeScreenshot("Güç Ayarlar", 3, 0);
         }
@@ -98,7 +71,7 @@ namespace ConsoleApp10.Pages
         //
         public void GucAyarlarMenu()
         {
-            BtGuc.Click();
+            if (!isClicked) return;
             BtGucAyarlar.Click();
             TakeScreenshot("Devam Et", 3, 1);
             Thread.Sleep(2500);

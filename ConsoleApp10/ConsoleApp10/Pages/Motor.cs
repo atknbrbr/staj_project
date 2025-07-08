@@ -1,24 +1,7 @@
-﻿using ConsoleApp10.Utils;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Winium;
+﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Drawing.Imaging;
 using System.Linq;
-using System.Net.Configuration;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Automation;
-using System.Xml.Linq;
-using WindowsInput;
-using Winium;
-using Winium.Cruciatus.Elements;
-using Winium.Elements.Desktop;
-using Winium.Elements.Desktop.Extensions;
 
 namespace ConsoleApp10.Pages
 {
@@ -26,6 +9,7 @@ namespace ConsoleApp10.Pages
     {
         private static int ustLimit, altLimit, guncelDeger;
         private static int fileName = 1;
+        private bool isClicked = false;
 
         private IWebElement BtMotor => winiumDriver.FindElementById("Motor");
         private IWebElement CheckboxMotorTablo => winiumDriver.FindElementById("tablo_goster");
@@ -48,6 +32,7 @@ namespace ConsoleApp10.Pages
         public void ClickMotorMenu()
         {
             BtMotor.Click();
+            isClicked = true;
             TakeScreenshot("Motor", 1);
             Thread.Sleep(500);
         }
@@ -57,9 +42,9 @@ namespace ConsoleApp10.Pages
         //
         public void ClickMotorGostergeler()
         {
-            BtMotor.Click();
+            if (!isClicked) return;
             BtGostergeler.Click();
-            TakeScreenshot("Göstergeler", 1, 0, 0);
+            TakeScreenshot("Gostergeler", 1, 0, 0);
             Thread.Sleep(500);
         }
 
@@ -68,8 +53,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickMotorGostergelerTablo()
         {
-            BtMotor.Click();
-            BtGostergeler.Click();
+            if (!isClicked) return;
             CheckboxMotorTablo.Click();
             TakeScreenshot("Tablo Göster", 1, 0, 0);
             Thread.Sleep(500);
@@ -78,59 +62,40 @@ namespace ConsoleApp10.Pages
         //
         // Göstergelerdeki seçim kısmının testi
         //
-        public bool ClickMotorGostergelerSecim(String btnName)
+        public void ClickMotorGostergelerSecim(String btnName)
         {
-            BtMotor.Click();
-            BtGostergeler.Click();
-            try
-            {
-                IWebElement radioBtn = winiumDriver.FindElementById(btnName);
-                radioBtn.Click();
-                TakeScreenshot("Seçilen Değer-1", 1, 0, 0);
-                Thread.Sleep(200);
-                ComboGosterge.Click();
-                Thread.Sleep(200);
-                TakeScreenshot("Seçilen Değer-2", 1, 0, 0);
-                Thread.Sleep(500);
-                return true;
-            }
-            catch (Exception)
-            { 
-                return false;
-            }
-            
+            if (!isClicked) return;
+            IWebElement radioBtn = winiumDriver.FindElementById(btnName);
+            radioBtn.Click();
+            TakeScreenshot("Seçilen Değer-deger1", 1, 0, 0);
+            Thread.Sleep(200);
+            ComboGosterge.Click();
+            Thread.Sleep(200);
+            TakeScreenshot("Seçilen Değer-deger2", 1, 0, 0);
+            Thread.Sleep(500);
         }
 
         //
         // Göstergelerdeki "Motor ayarları" kısmının test edilmesi
         //
-        public bool ClickMotorGostergelerMotorAyarlari()
+        public void ClickMotorGostergelerMotorAyarlari()
         {
-            BtMotor.Click();
-            BtGostergeler.Click();
-            try
-            {
-                TakeScreenshot("Motor Ayarları-motor1", 1, 0, 0);
-                ComboMotorAyar1.Click();
-                Thread.Sleep(500);
-                TakeScreenshot("Motor Ayarları-motor2", 1, 0, 0);
-                ElemComboMotor1.Click();
-                Thread.Sleep(200);
-                TakeScreenshot("Motor Ayarları-motor3", 1, 0, 0);
-                ComboMotorAyar2.Click();
-                Thread.Sleep(500);
-                TakeScreenshot("Motor Ayarları-motor4", 1, 0, 0);
-                ElemComboMotor2.Click();
-                Thread.Sleep(200);
-                TakeScreenshot("Motor Ayarları-motor5", 1, 0, 0);
+            if (!isClicked) return;
+            TakeScreenshot("Motor Ayarları-motor1", 1, 0, 0);
+            ComboMotorAyar1.Click();
+            Thread.Sleep(500);
+            TakeScreenshot("Motor Ayarları-motor2", 1, 0, 0);
+            ElemComboMotor1.Click();
+            Thread.Sleep(200);
+            TakeScreenshot("Motor Ayarları-motor3", 1, 0, 0);
+            ComboMotorAyar2.Click();
+            Thread.Sleep(500);
+            TakeScreenshot("Motor Ayarları-motor4", 1, 0, 0);
+            ElemComboMotor2.Click();
+            Thread.Sleep(200);
+            TakeScreenshot("Motor Ayarları-motor5", 1, 0, 0);
 
-                Thread.Sleep(500);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            Thread.Sleep(500);
         }
 
         //
@@ -138,7 +103,7 @@ namespace ConsoleApp10.Pages
         //
         public void ClickMotorDiagnostikMenu()
         {
-            BtMotor.Click();
+            if (!isClicked) return;
             Thread.Sleep(500);
             BtDiagnostik.Click();
             var elements = cruciatusElement.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='TextBlock']")).ToList();
@@ -194,7 +159,7 @@ namespace ConsoleApp10.Pages
         {
             if (fileName == 1)
             {
-                TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1); 
+                TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                 fileName++;
             }
 
@@ -206,7 +171,7 @@ namespace ConsoleApp10.Pages
             {
                 if (ustLimit < 0)
                 {
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
 
@@ -217,7 +182,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 80)
@@ -226,7 +191,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -235,7 +200,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
             }
@@ -249,7 +214,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
 
                 }
@@ -260,7 +225,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (ustLimit > 200)
@@ -269,7 +234,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
 
                 }
@@ -283,7 +248,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
 
                 }
@@ -294,7 +259,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -303,7 +268,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
             }
@@ -316,7 +281,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 80)
@@ -326,7 +291,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
                 if (altLimit < 0)
@@ -336,7 +301,7 @@ namespace ConsoleApp10.Pages
                     {
                         actions.Click().Perform();
                     }
-                    TakeScreenshot("diagnostik" + fileName.ToString(), 1, 0, 1);
+                    TakeScreenshot($"diagnostik{fileName}", 1, 0, 1);
                     fileName++;
                 }
             }
@@ -347,9 +312,9 @@ namespace ConsoleApp10.Pages
         //
         public void ClickMotorAyarlarMenu()
         {
-            BtMotor.Click();
+            if (!isClicked) return;
             BtMotorAyarlar.Click();
-            TakeScreenshot("Motor Ayarlar" + fileName.ToString(), 1, 1);
+            TakeScreenshot("Motor Ayarlar", 1, 1);
             Thread.Sleep(200);
         }
     }

@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp10.Pages
 {
@@ -23,7 +18,6 @@ namespace ConsoleApp10.Pages
         //
         public void ClickKameraHepsiYok()
         {
-            konfigurasyon.ClickKonfigurasyonMenu(true);
             BtKamera.Click();
             BtKameraKontrol.Click();
             TakeScreenshot("Kamera Test(Tum konfigurasyonlar kapalı)", 5);
@@ -34,7 +28,6 @@ namespace ConsoleApp10.Pages
         //
         public void ClickKameraListViewAcik()
         {
-            konfigurasyon.ClickKonfigurasyonMenu(true);
             konfigurasyon.KonfigurasyonGonderListviewVar(true);
             konfigurasyon.KonfigurasyonGonderSekmeVar(true);
             BtKamera.Click();

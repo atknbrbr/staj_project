@@ -1,17 +1,11 @@
-﻿using ConsoleApp10.Utils;
-using NUnit.Framework.Constraints;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Winium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using Winium.Cruciatus.Core;
 using Winium.Cruciatus.Elements;
-using Winium.Cruciatus.Extensions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleApp10.Pages
 {
@@ -22,6 +16,7 @@ namespace ConsoleApp10.Pages
         private CruciatusElement comboListView;
         private CruciatusElement comboPopUp;
         private CruciatusElement comboSekme;
+        private bool isClicked = false;
 
         private IWebElement BtKonfigurasyon => winiumDriver.FindElementById("Konfigurasyon");
         private IWebElement BtInfoYesil => winiumDriver.FindElementById("InfoYesil");
@@ -50,6 +45,7 @@ namespace ConsoleApp10.Pages
         public void ClickKonfigurasyonMenu(bool beCalledInKamera)
         {
             BtKonfigurasyon.Click();
+            isClicked = true;
             if (!beCalledInKamera) TakeScreenshot("Konfigurasyon", 4);
             ReadComboBoxes();
         }
@@ -59,9 +55,10 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonGonderHepsiYok()
         {
-            BtKonfigurasyon.Click();
+            if (!isClicked) return;
             BtKonfigurasyonGonder.Click();
             TakeScreenshot("Konfigurasyon gönder(Tüm seçenekler yok)", 4);
+            
         }
 
         //
@@ -69,7 +66,7 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonGonderListviewVar(bool beCalledInKamera)
         {
-            BtKonfigurasyon.Click();
+            if (!isClicked) return;
             comboListView.FindElementByUid("KonfigurasyonCombobox").Click();
             Thread.Sleep(1000);
             var secenekler = comboListView.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
@@ -77,6 +74,7 @@ namespace ConsoleApp10.Pages
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
             if (!beCalledInKamera) TakeScreenshot("ListView Konfigurasyon", 4);
+
         }
 
         //
@@ -84,8 +82,8 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonListviewGoruntu()
         {
+            if (!isClicked) return;
             int pageDownName = 1;
-            BtKonfigurasyon.Click();
             comboListView.FindElementByUid("KonfigurasyonCombobox").Click();
             Thread.Sleep(1000);
             var secenekler = comboListView.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
@@ -94,27 +92,26 @@ namespace ConsoleApp10.Pages
             BtKonfigurasyonGonder.Click();
 
 
-            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
+            TakeScreenshot($"ListView-listview{pageDownName}", 4);
             pageDownName++;
 
             IWebElement PageDown = winiumDriver.FindElementById("ListeScroll")
-                                                .FindElement(OpenQA.Selenium.By.Id("VerticalScrollBar"))
-                                                .FindElement(OpenQA.Selenium.By.Id("PageDown"));
+                                                .FindElement(By.Id("VerticalScrollBar"))
+                                                .FindElement(By.Id("PageDown"));
 
             var x = Array.ConvertAll(PageDown.GetAttribute("BoundingRectangle").Split(',').ToArray(), int.Parse);
             actions = new Actions(winiumDriver)
                         .MoveToElement(PageDown, (x[2] / 2), x[3] - 2);
             actions.Click().Perform();
 
-            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
+            TakeScreenshot($"ListView-listview{pageDownName}", 4);
             pageDownName++;
 
             actions.Click().Perform();
 
-            TakeScreenshot("ListView-" + pageDownName.ToString(), 4);
+            TakeScreenshot($"ListView-listview{pageDownName}", 4);
             pageDownName++;
-
-
+            
         }
 
 
@@ -123,7 +120,7 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonGonderPopUpVar()
         {
-            BtKonfigurasyon.Click();
+            if (!isClicked) return;
             comboPopUp.FindElementByUid("KonfigurasyonCombobox").Click();
             Thread.Sleep(1000);
             var secenekler = comboPopUp.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
@@ -131,6 +128,7 @@ namespace ConsoleApp10.Pages
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
             TakeScreenshot("Pop Up Konfigurasyon", 4);
+            
         }
 
         //
@@ -138,7 +136,7 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonGonderSekmeVar(bool beCalledInKamera)
         {
-            BtKonfigurasyon.Click();
+            if (!isClicked) return;
             comboSekme.FindElementByUid("KonfigurasyonCombobox").Click();
             Thread.Sleep(1000);
             var secenekler = comboSekme.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
@@ -152,24 +150,26 @@ namespace ConsoleApp10.Pages
         //
         public void KonfigurasyonDurumBilgilendirme()
         {
-            BtKonfigurasyon.Click();
+
+            if (!isClicked) return;
             comboPopUp.FindElementByUid("KonfigurasyonCombobox").Click();
             Thread.Sleep(1000);
             var secenekler = comboPopUp.FindElement(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ComboBox']"));
             var varYok = secenekler.FindElements(Winium.Cruciatus.Core.By.XPath("*[@ClassName='ListBoxItem']")).ToList();
             varYok[0].Click();
             BtKonfigurasyonGonder.Click();
-            TakeScreenshot("Pop Up" + imageName.ToString(), 4);
+            TakeScreenshot($"Pop up{imageName}", 4);
             imageName++;
             BtInfoYesil.Click();
-            TakeScreenshot("Pop Up" + imageName.ToString(), 4);
+            TakeScreenshot($"Pop up{imageName}", 4);
             imageName++;
             BtInfoSari.Click();
-            TakeScreenshot("Pop Up" + imageName.ToString(), 4);
+            TakeScreenshot($"Pop up{imageName}", 4);
             imageName++;
             BtInfoKirmizi.Click();
-            TakeScreenshot("Pop Up" + imageName.ToString(), 4);
+            TakeScreenshot($"Pop up{imageName}", 4);
             imageName++;
+            
         }
     }
 }

@@ -2,10 +2,7 @@
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Winium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using Winium.Cruciatus.Elements;
 using static ConsoleApp10.Drivers.WinumDriverFactory;
 
@@ -26,6 +23,7 @@ namespace ConsoleApp10.Pages
             winiumDriver = GetWiniumDriver();
             actions = GetActions();
             cruciatusElement = GetCruciatusElement();
+            Thread.Sleep(1500);
             SetAppWindow();
         }
 

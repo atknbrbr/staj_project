@@ -172,7 +172,6 @@
     <Compile Include="Tests\MotorTest.cs" />
     <Compile Include="Tests\YakitTest.cs" />
     <Compile Include="Utils\MainHeaders.cs" />
-    <Compile Include="Utils\OldTakeScreenshot.cs" />
     <Compile Include="Utils\PInvoke.cs" />
     <Compile Include="Utils\SetForegroundWindowApp.cs" />
     <Compile Include="Utils\SetFullscreen.cs" />
